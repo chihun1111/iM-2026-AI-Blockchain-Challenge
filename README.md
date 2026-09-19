@@ -1,8 +1,10 @@
-# 소비나침반 개발 에이전트 인계 패키지 v2.0
+# 소비나침반 프로토타입 v3.2
 
-팀 기적의 인큐4 | 2026.09.19 | 기본 실행 목표 P0_DEMO
+> 동성로·중앙로역 일대 / 한식 음식점 3개 후보의 검증 메뉴 API와 승인 기반 Gemini 연결 준비에 집중한다. 제출 서류·접수는 사용자 담당이다. 필요한 실제 입력은 `USER_ACTIONS.md`, 계약은 `contracts/`, 데이터 형식은 `data/real/README.md`에 있다.
 
-이 폴더는 구현 명세를 기준으로 만든 소비나침반 P0 데모입니다. 백엔드 6개 API·데모 SQLite·규칙 파서·예산/추천/근거 엔진·S01~S05 React 화면·Gemini 연결 준비가 구현되어 있습니다. 외부 Gemini 실호출·지도·실데이터는 사용자 입력과 별도 승인이 필요한 후속 연동입니다. `reports/PACKAGE_VALIDATION.md`는 패키지 내부 데이터·스키마 정합성 검사이며 앱 기능·성능 테스트 결과와 구분합니다.
+팀 기적의 인큐4 | 2026.09.19 | 기본 실행은 합성 demo, 목표는 검증 실데이터 프로토타입
+
+백엔드 6개 API, demo SQLite, 규칙 파서, 검증 메뉴/필수비용 계산, 3단계 React 흐름과 Gemini 실행 게이트가 구현되어 있다. 실제 메뉴·공공 점포 원본·승인 카드 집계가 없으므로 현재 화면은 합성 demo다. Gemini 승인안도 미승인이고 실제 호출은 없다.
 
 ## 사용하는 방법
 
@@ -18,14 +20,15 @@
 | `AGENTS.md` | 권한 경계, 중단, 제한된 수정, 진행 보고, 재개 규칙 |
 | `SPEC.md` | 화면·데이터·예산·추천·API·품질 명세 |
 | `TASKS.md` | T00~T08 필수 작업과 X01~X03 선택 연동 |
-| `config/policy.v2.json` | 범위·모드·가중치·검증 임계값 |
+| `config/policy.v2.json` | v3.2 실행 범위·모드·검증 정책(호환 파일명 유지) |
 | `schemas/` / `examples/` | 확정 조건·에이전트 상태 스키마와 API 예시 |
 | `frontend/structure/` | React 화면의 HTML/DOM 구조 기준과 정적 골격 |
 | `contracts/` | 프론트–백엔드 계약서·OpenAPI·대표 JSON 예시 |
 | `design/` | v2.1 디자인 명세와 제공 미리보기 연결 파일 |
-| `data/demo/` | 가상 장소 40개·가격 구성 40개·주간 상권 집계 768개 |
+| `data/demo/` | 실제 자료가 아닌 회귀 테스트용 합성 데이터 |
+| `data/real/data_candidates.json` | 3개 장소·7개 공개 가격 참조 후보와 미확보 검증 필드 |
 | `tests/` | 인수 사례와 자연어 평가 30문장 |
-| `AGENT_STATUS.json` | NOT_STARTED로 시작하는 진행 상태 |
+| `AGENT_STATUS.json` | v3.2 진행 상태와 실자료 재개 위치 |
 | `BLOCKERS.md` / `DECISIONS.md` | 문제·미확보 정보와 범위 결정 |
 | `templates/` | 중단·종료·재개 보고 형식 |
 | `.env.example` | 비밀값을 포함하지 않는 설정 예시 |
@@ -35,7 +38,7 @@
 
 P0는 외부 AI·지도·실데이터 없이 실행하도록 구현합니다. UI에는 규칙 기반 분석, 가상 데이터, 고정 시연 시각을 명확히 표시합니다. 이것을 실제 AI·실제 금융 데이터 서비스 완료로 보고하지 않습니다. X01~X03은 관련 계정·권한·자료·승인이 확보되기 전에는 미연동입니다.
 
-현재 실제 장애를 관측한 것은 아닙니다. `BLOCKERS.md`의 준비 항목은 외부 연동을 위해 확인할 사항이며, 개발 에이전트가 환경을 읽은 뒤 실제 장애 여부와 등급을 판단해야 합니다.
+현재 `BLOCKERS.md`의 실제 메뉴·공공 점포 원본·카드 집계/권한·Gemini 승인 항목은 확인된 미확보 상태다. 독립 구현은 진행됐지만 실제 연동 완료로 간주하지 않는다.
 
 ## 현재 구현 범위
 
@@ -63,7 +66,7 @@ py -3.12 -m venv .venv
 .venv\Scripts\python.exe scripts/export_openapi.py
 ```
 
-현재 제공하는 API는 다음 6개입니다.
+현재 제공하는 API는 다음 6개입니다. 실제 데이터는 `scripts/import_real_data.py`가 별도 real DB에 반입하며, 개별 메뉴 가격과 최소 주문 수량은 서버 계산에 사용됩니다.
 
 | 메서드 | 경로 | 역할 |
 |---|---|---|
@@ -71,7 +74,7 @@ py -3.12 -m venv .venv
 | GET | `/api/meta` | 지원 범위·모드·기준시각·정책·스냅샷 |
 | POST | `/api/parse-query` | 규칙 기반 조건 초안과 확인 필요 필드 |
 | POST | `/api/recommendations` | 서버 계산 예산 필터·추천·근거 |
-| GET | `/api/places/{place_id}?snapshot_id=...` | 장소·가격·근거·8주 상권 집계 |
+| GET | `/api/places/{place_id}?snapshot_id=...` | 장소·검증 메뉴·과거 상권 참고 근거 |
 | POST | `/api/budget/estimate` | 최대 3개 대안의 개별 예산 계산 |
 
 서버는 클라이언트가 보낸 가격을 신뢰하지 않고 `place_id`와 스냅샷의 가격을 다시 계산합니다. 데모 데이터에는 `is_mock=true`와 가상 데이터 경고가 유지됩니다. 프론트–백엔드 계약의 한 곳짜리 인계본은 `contracts/`에서 확인합니다.
@@ -80,11 +83,9 @@ py -3.12 -m venv .venv
 
 개발 서버 명령은 백엔드와 Vite 프런트엔드를 함께 시작합니다. 브라우저에서 `http://127.0.0.1:5173/`을 열면 다음 흐름을 사용할 수 있습니다.
 
-1. S01 자연어 입력 및 예시 문장
-2. S02 추정·누락 조건 확인과 수동 보완
-3. S03 최대 5개 추천, 정렬, 최대 3개 비교 선택
-4. S04 장소 상세, 가격 구성, 근거, 8주 상권 집계
-5. S05 대안별 예산 비교 및 로컬 저장 목록
+1. 입력·조건: 짧은 문장 분석과 누락값 수동 확인
+2. 추천: 검증 메뉴·예산·목적으로 최대 3개 대안 비교
+3. 근거·예산: 메뉴별 수량·필수비용과 실제 관측 기간의 상권 참고 근거
 
 실제 지도는 연결하지 않고, 저장소에는 장소 ID·스냅샷 ID·저장 시각만 기록합니다. v2.1의 목록·상태·비교 패널 구조는 `frontend/src/ui/Screens.tsx`에 반영했고, 디자인 기준은 `design/DESIGN_SPEC.md`에 정리했습니다. 브라우저 검수 결과는 `reports/UI_BROWSER.md`와 `output/playwright/`에 남깁니다.
 
@@ -95,13 +96,13 @@ py -3.12 -m venv .venv
 ```text
 PARSER_MODE=gemini
 LLM_PROVIDER=gemini
-GEMINI_MODEL=gemini-2.5-flash
+GEMINI_MODEL=gemini-3.5-flash-lite
 GEMINI_API_KEY=<비공개 서버 환경변수>
 ALLOW_EXTERNAL_CALLS=true
 ALLOW_PAID_CALLS=true
 ```
 
-`backend/app/adapters/gemini.py`는 공식 `models.generateContent` REST 계약에 맞춰 `x-goog-api-key` 서버 헤더와 JSON 응답 모드를 사용하고, 반환 JSON을 공유 계약의 제한 스키마로 검증합니다. `ALLOW_EXTERNAL_CALLS`와 `ALLOW_PAID_CALLS`가 모두 true일 때만 호출하며, 실패·timeout·권한 오류는 규칙 파서 대체 경로로 처리합니다. 서버가 계산하는 예산·총액·순위는 Gemini에 위임하지 않습니다. 실제 호출 전에는 공급자·모델·전송할 원문 범위·비용 및 개인정보 전송 승인을 확인해야 합니다.
+`backend/app/adapters/gemini.py`는 `x-goog-api-key` 서버 헤더와 구조화 JSON을 사용한다. 호출하려면 `config/gemini_approval_plan.json`의 데이터 API gate·승인자·시각·모델·전송 범위·총/일 한도, 두 실행 스위치, 서버 `GEMINI_API_KEY`, 요청별 전송 동의가 모두 필요하다. 앱은 `GOOGLE_API_KEY`를 사용하지 않는다. 호출 전 최대 비용을 예약하고, 재시도와 사용량 불명 실패를 보수적으로 합산한다.
 
 환경변수를 서버에 설정한 뒤에는 다음 명령으로 키·헤더·원문을 출력하지 않는 직접 연결 스모크 검사를 실행할 수 있습니다. 키를 명령행 인자로 전달하지 않습니다.
 
@@ -115,7 +116,7 @@ ALLOW_PAID_CALLS=true
 .venv\Scripts\python.exe scripts/verify.py --all
 ```
 
-이 명령은 원본 데이터 해시·행 수, 30개 자연어 사례, 백엔드 계약 테스트, OpenAPI 생성, 프런트엔드 빌드를 순서대로 실행합니다. 실제 Gemini 호출은 포함하지 않습니다.
+이 명령은 v3.2 후보/승인 준비도, demo 원본 해시·행 수, 자연어 사례, 백엔드 계약 테스트, OpenAPI 생성, 프런트엔드 빌드를 순서대로 실행한다. 실제 Gemini 호출은 포함하지 않는다.
 
 실행 중인 서버의 실제 HTTP/CORS·계산·오류 envelope는 별도로 확인합니다.
 
@@ -125,6 +126,6 @@ ALLOW_PAID_CALLS=true
 
 ## 검증 결과의 범위
 
-P0 데모의 앱 실행·백엔드 계약·프런트엔드 빌드·브라우저 흐름·반응형·키보드 검수는 완료했습니다. 실지도·LLM·실제 카드데이터는 아직 연결하지 않았고 `reports/TEST_REPORT.md`, `reports/FINAL_REPORT.md`, `BLOCKERS.md`에 후속 입력과 미실행 범위를 기록했습니다. 실제 Gemini 연결을 재개할 때는 키 값을 채팅에 보내지 말고 서버 환경변수에만 설정한 뒤 X01 실호출 검증을 별도로 수행합니다.
+합성 fixture 기준 API 계약과 프런트 빌드는 통과했다. 실제 메뉴·S04 점포 매칭·카드 집계/권한 및 Gemini 실호출은 미완료다. `reports/FINAL_REPORT.md`, `BLOCKERS.md`, `USER_ACTIONS.md`에 필요한 정확한 필드와 재개 순서를 기록했다.
 
 # iM-2026-AI-Blockchain-Challenge

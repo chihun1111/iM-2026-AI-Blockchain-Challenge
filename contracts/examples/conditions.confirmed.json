@@ -1,0 +1,19 @@
+{
+  "schema_version": "2.0",
+  "region_id": "dongseongro",
+  "category": "restaurant",
+  "purpose": "meal",
+  "party_size": 2,
+  "budget": {
+    "type": "per_person",
+    "amount": 20000,
+    "currency": "KRW"
+  },
+  "visit_at": "2026-09-19T19:00:00+09:00",
+  "atmosphere_preferences": [],
+  "required_atmosphere": [],
+  "priority_profile": "balanced",
+  "origin": null,
+  "radius_m": 2000,
+  "confirmed": true
+}

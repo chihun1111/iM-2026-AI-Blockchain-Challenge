@@ -1,0 +1,36 @@
+{
+  "request_id": "req-demo-parse-001",
+  "snapshot_id": "demo-v2-20260919",
+  "policy_version": "cc-policy-2.0.0",
+  "data_mode": "demo",
+  "reference_now": "2026-09-19T18:00:00+09:00",
+  "warnings": ["규칙 기반 조건 분석 · 외부 AI 미연결"],
+  "parser_mode": "rules",
+  "draft": {
+    "schema_version": "2.0",
+    "region_id": "dongseongro",
+    "category": "restaurant",
+    "purpose": "meal",
+    "party_size": 2,
+    "budget": {"type": "per_person", "amount": 20000, "currency": "KRW"},
+    "visit_at": "2026-09-19T19:00:00+09:00",
+    "atmosphere_preferences": [],
+    "required_atmosphere": [],
+    "priority_profile": "balanced",
+    "origin": null,
+    "radius_m": 2000,
+    "confirmed": false
+  },
+  "field_meta": {
+    "region_id": {"origin": "explicit", "reason_code": null},
+    "category": {"origin": "explicit", "reason_code": null},
+    "purpose": {"origin": "inferred", "reason_code": null},
+    "party_size": {"origin": "explicit", "reason_code": null},
+    "budget.type": {"origin": "explicit", "reason_code": null},
+    "budget.amount": {"origin": "explicit", "reason_code": null},
+    "visit_at": {"origin": "explicit", "reason_code": null},
+    "priority_profile": {"origin": "default", "reason_code": null}
+  },
+  "missing_fields": [],
+  "confirmation_required": []
+}

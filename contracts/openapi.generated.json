@@ -1,0 +1,2523 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "소비나침반 API",
+    "description": "동성로 한식 프로토타입 API와 승인 기반 Gemini 조건 추출 준비",
+    "version": "3.2.0"
+  },
+  "paths": {
+    "/api/health": {
+      "get": {
+        "summary": "Health",
+        "operationId": "health_api_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HealthResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "처리 중 서버 오류가 발생했습니다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "활성 스냅샷 또는 의존 서비스를 사용할 수 없습니다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/meta": {
+      "get": {
+        "summary": "Meta",
+        "operationId": "meta_api_meta_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MetaResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "처리 중 서버 오류가 발생했습니다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "활성 스냅샷 또는 의존 서비스를 사용할 수 없습니다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/parse-query": {
+      "post": {
+        "summary": "Parse Query",
+        "operationId": "parse_query_api_parse_query_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ParseQueryRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ParseResponse"
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "요청 본문이 정책상 허용된 크기를 초과했습니다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "요청 형식 또는 값이 올바르지 않습니다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "처리 중 서버 오류가 발생했습니다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "활성 스냅샷 또는 의존 서비스를 사용할 수 없습니다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/recommendations": {
+      "post": {
+        "summary": "Recommendations",
+        "operationId": "recommendations_api_recommendations_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RecommendationRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RecommendationResponse"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "스냅샷이 현재 결과와 일치하지 않습니다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "요청 형식 또는 값이 올바르지 않습니다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "처리 중 서버 오류가 발생했습니다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "활성 스냅샷 또는 의존 서비스를 사용할 수 없습니다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/places/{place_id}": {
+      "get": {
+        "summary": "Place",
+        "operationId": "place_api_places__place_id__get",
+        "parameters": [
+          {
+            "name": "place_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Place Id"
+            }
+          },
+          {
+            "name": "snapshot_id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 100,
+              "title": "Snapshot Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PlaceResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "요청한 리소스를 찾을 수 없습니다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "스냅샷이 현재 결과와 일치하지 않습니다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "요청 형식 또는 값이 올바르지 않습니다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "처리 중 서버 오류가 발생했습니다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "활성 스냅샷 또는 의존 서비스를 사용할 수 없습니다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/budget/estimate": {
+      "post": {
+        "summary": "Budget Estimate",
+        "operationId": "budget_estimate_api_budget_estimate_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BudgetEstimateRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BudgetResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "요청한 리소스를 찾을 수 없습니다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "스냅샷이 현재 결과와 일치하지 않습니다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "요청 본문이 정책상 허용된 크기를 초과했습니다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "요청 형식 또는 값이 올바르지 않습니다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "처리 중 서버 오류가 발생했습니다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "활성 스냅샷 또는 의존 서비스를 사용할 수 없습니다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AdapterStatus": {
+        "properties": {
+          "provider": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Provider"
+          },
+          "model": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Model"
+          },
+          "configured": {
+            "type": "boolean",
+            "title": "Configured"
+          },
+          "enabled": {
+            "type": "boolean",
+            "title": "Enabled"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "provider",
+          "model",
+          "configured",
+          "enabled"
+        ],
+        "title": "AdapterStatus"
+      },
+      "AreaMetricData": {
+        "properties": {
+          "metric_id": {
+            "type": "string",
+            "title": "Metric Id"
+          },
+          "area_id": {
+            "type": "string",
+            "title": "Area Id"
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "restaurant",
+              "cafe"
+            ],
+            "title": "Category"
+          },
+          "day_group": {
+            "type": "string",
+            "title": "Day Group"
+          },
+          "time_bucket": {
+            "type": "string",
+            "title": "Time Bucket"
+          },
+          "week_start": {
+            "type": "string",
+            "title": "Week Start"
+          },
+          "week_end": {
+            "type": "string",
+            "title": "Week End"
+          },
+          "txn_count": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Txn Count"
+          },
+          "merchant_count": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Merchant Count"
+          },
+          "footfall_count": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Footfall Count"
+          },
+          "source_id": {
+            "type": "string",
+            "title": "Source Id"
+          },
+          "metric_definition_version": {
+            "type": "string",
+            "title": "Metric Definition Version"
+          },
+          "coverage_status": {
+            "type": "string",
+            "title": "Coverage Status"
+          },
+          "is_mock": {
+            "type": "boolean",
+            "title": "Is Mock"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "metric_id",
+          "area_id",
+          "category",
+          "day_group",
+          "time_bucket",
+          "week_start",
+          "week_end",
+          "txn_count",
+          "merchant_count",
+          "source_id",
+          "metric_definition_version",
+          "coverage_status",
+          "is_mock"
+        ],
+        "title": "AreaMetricData"
+      },
+      "Budget": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "per_person",
+              "total"
+            ],
+            "title": "Type"
+          },
+          "amount": {
+            "type": "integer",
+            "maximum": 10000000.0,
+            "minimum": 1.0,
+            "title": "Amount"
+          },
+          "currency": {
+            "type": "string",
+            "const": "KRW",
+            "title": "Currency"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "type",
+          "amount",
+          "currency"
+        ],
+        "title": "Budget"
+      },
+      "BudgetEstimateRequest": {
+        "properties": {
+          "conditions": {
+            "$ref": "#/components/schemas/Conditions"
+          },
+          "snapshot_id": {
+            "type": "string",
+            "maxLength": 100,
+            "minLength": 1,
+            "title": "Snapshot Id"
+          },
+          "place_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "maxItems": 3,
+            "minItems": 1,
+            "title": "Place Ids"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "conditions",
+          "snapshot_id",
+          "place_ids"
+        ],
+        "title": "BudgetEstimateRequest"
+      },
+      "BudgetItem": {
+        "properties": {
+          "place_id": {
+            "type": "string",
+            "title": "Place Id"
+          },
+          "bundle_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Bundle Id"
+          },
+          "party_size": {
+            "type": "integer",
+            "title": "Party Size"
+          },
+          "cost_min": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Cost Min"
+          },
+          "cost_max": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Cost Max"
+          },
+          "per_person_min": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Per Person Min"
+          },
+          "per_person_max": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Per Person Max"
+          },
+          "remaining_min": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Remaining Min"
+          },
+          "remaining_max": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Remaining Max"
+          },
+          "budget_status": {
+            "type": "string",
+            "enum": [
+              "fits",
+              "exceeds",
+              "unknown"
+            ],
+            "title": "Budget Status"
+          },
+          "reason_code": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Reason Code"
+          },
+          "source_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Source Id"
+          },
+          "assumptions": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Assumptions"
+          },
+          "is_mock": {
+            "type": "boolean",
+            "title": "Is Mock"
+          },
+          "observed_at": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Observed At"
+          },
+          "menu_calculations": {
+            "items": {
+              "$ref": "#/components/schemas/MenuCalculationData"
+            },
+            "type": "array",
+            "title": "Menu Calculations"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "place_id",
+          "bundle_id",
+          "party_size",
+          "cost_min",
+          "cost_max",
+          "per_person_min",
+          "per_person_max",
+          "remaining_min",
+          "remaining_max",
+          "budget_status",
+          "reason_code",
+          "source_id",
+          "assumptions",
+          "is_mock",
+          "observed_at",
+          "menu_calculations"
+        ],
+        "title": "BudgetItem"
+      },
+      "BudgetResponse": {
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Request Id"
+          },
+          "snapshot_id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Snapshot Id"
+          },
+          "policy_version": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Policy Version"
+          },
+          "data_mode": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Data Mode"
+          },
+          "reference_now": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Reference Now"
+          },
+          "warnings": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Warnings"
+          },
+          "comparison_mode": {
+            "type": "string",
+            "const": "alternatives",
+            "title": "Comparison Mode"
+          },
+          "total_budget": {
+            "type": "integer",
+            "title": "Total Budget"
+          },
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/BudgetItem"
+            },
+            "type": "array",
+            "title": "Items"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "request_id",
+          "snapshot_id",
+          "policy_version",
+          "data_mode",
+          "reference_now",
+          "warnings",
+          "comparison_mode",
+          "total_budget",
+          "items"
+        ],
+        "title": "BudgetResponse"
+      },
+      "Conditions": {
+        "properties": {
+          "schema_version": {
+            "type": "string",
+            "const": "2.0",
+            "title": "Schema Version"
+          },
+          "region_id": {
+            "type": "string",
+            "enum": [
+              "dongseongro",
+              "suseongmot"
+            ],
+            "title": "Region Id"
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "restaurant",
+              "cafe"
+            ],
+            "title": "Category"
+          },
+          "purpose": {
+            "type": "string",
+            "enum": [
+              "meal",
+              "cafe",
+              "date",
+              "friends"
+            ],
+            "title": "Purpose"
+          },
+          "party_size": {
+            "type": "integer",
+            "maximum": 6.0,
+            "minimum": 1.0,
+            "title": "Party Size"
+          },
+          "budget": {
+            "$ref": "#/components/schemas/Budget"
+          },
+          "visit_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Visit At"
+          },
+          "atmosphere_preferences": {
+            "items": {
+              "type": "string",
+              "enum": [
+                "quiet",
+                "conversation",
+                "lively",
+                "solo_friendly"
+              ]
+            },
+            "type": "array",
+            "title": "Atmosphere Preferences"
+          },
+          "required_atmosphere": {
+            "items": {
+              "type": "string",
+              "enum": [
+                "quiet",
+                "conversation",
+                "lively",
+                "solo_friendly"
+              ]
+            },
+            "type": "array",
+            "title": "Required Atmosphere"
+          },
+          "priority_profile": {
+            "type": "string",
+            "const": "balanced",
+            "title": "Priority Profile"
+          },
+          "origin": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Origin"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "radius_m": {
+            "type": "integer",
+            "maximum": 10000.0,
+            "minimum": 100.0,
+            "title": "Radius M"
+          },
+          "confirmed": {
+            "type": "boolean",
+            "const": true,
+            "title": "Confirmed"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "schema_version",
+          "region_id",
+          "category",
+          "purpose",
+          "party_size",
+          "budget",
+          "visit_at",
+          "priority_profile",
+          "radius_m",
+          "confirmed"
+        ],
+        "title": "Conditions"
+      },
+      "DataAsOf": {
+        "properties": {
+          "price": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Price"
+          },
+          "opening_hours": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Opening Hours"
+          },
+          "atmosphere": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Atmosphere"
+          },
+          "area_metrics": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Area Metrics"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "price",
+          "opening_hours",
+          "atmosphere",
+          "area_metrics"
+        ],
+        "title": "DataAsOf"
+      },
+      "DraftBudget": {
+        "properties": {
+          "type": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "per_person",
+                  "total"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Type"
+          },
+          "amount": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "maximum": 10000000.0,
+                "minimum": 1.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Amount"
+          },
+          "currency": {
+            "type": "string",
+            "const": "KRW",
+            "title": "Currency"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "type",
+          "amount",
+          "currency"
+        ],
+        "title": "DraftBudget"
+      },
+      "ErrorBody": {
+        "properties": {
+          "code": {
+            "type": "string",
+            "title": "Code"
+          },
+          "message": {
+            "type": "string",
+            "title": "Message"
+          },
+          "retryable": {
+            "type": "boolean",
+            "title": "Retryable"
+          },
+          "fields": {
+            "items": {
+              "$ref": "#/components/schemas/ErrorField"
+            },
+            "type": "array",
+            "title": "Fields"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "code",
+          "message",
+          "retryable",
+          "fields"
+        ],
+        "title": "ErrorBody"
+      },
+      "ErrorField": {
+        "properties": {
+          "path": {
+            "type": "string",
+            "title": "Path"
+          },
+          "message": {
+            "type": "string",
+            "title": "Message"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "path",
+          "message"
+        ],
+        "title": "ErrorField"
+      },
+      "ErrorResponse": {
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "title": "Request Id"
+          },
+          "error": {
+            "$ref": "#/components/schemas/ErrorBody"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "request_id",
+          "error"
+        ],
+        "title": "ErrorResponse"
+      },
+      "EvidenceData": {
+        "properties": {
+          "evidence_id": {
+            "type": "string",
+            "title": "Evidence Id"
+          },
+          "place_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Place Id"
+          },
+          "area_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Area Id"
+          },
+          "source_id": {
+            "type": "string",
+            "title": "Source Id"
+          },
+          "claim_type": {
+            "type": "string",
+            "title": "Claim Type"
+          },
+          "value": {
+            "title": "Value"
+          },
+          "unit": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Unit"
+          },
+          "observed_at": {
+            "type": "string",
+            "title": "Observed At"
+          },
+          "period_start": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Period Start"
+          },
+          "period_end": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Period End"
+          },
+          "aggregation_unit": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Aggregation Unit"
+          },
+          "is_mock": {
+            "type": "boolean",
+            "title": "Is Mock"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "evidence_id",
+          "place_id",
+          "area_id",
+          "source_id",
+          "claim_type",
+          "value",
+          "unit",
+          "observed_at",
+          "period_start",
+          "period_end",
+          "aggregation_unit",
+          "is_mock"
+        ],
+        "title": "EvidenceData"
+      },
+      "FieldMeta": {
+        "properties": {
+          "origin": {
+            "type": "string",
+            "enum": [
+              "explicit",
+              "inferred",
+              "default",
+              "missing",
+              "provider"
+            ],
+            "title": "Origin"
+          },
+          "reason_code": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Reason Code"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "origin"
+        ],
+        "title": "FieldMeta"
+      },
+      "HealthAdapters": {
+        "properties": {
+          "llm": {
+            "$ref": "#/components/schemas/AdapterStatus"
+          },
+          "map": {
+            "$ref": "#/components/schemas/MapAdapterStatus"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "llm",
+          "map"
+        ],
+        "title": "HealthAdapters"
+      },
+      "HealthResponse": {
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Request Id"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "ok",
+              "degraded"
+            ],
+            "title": "Status"
+          },
+          "config_valid": {
+            "type": "boolean",
+            "title": "Config Valid"
+          },
+          "db_access": {
+            "type": "boolean",
+            "title": "Db Access"
+          },
+          "snapshot": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/HealthSnapshot"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "adapters": {
+            "$ref": "#/components/schemas/HealthAdapters"
+          },
+          "warnings": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Warnings"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "request_id",
+          "status",
+          "config_valid",
+          "db_access",
+          "snapshot",
+          "adapters",
+          "warnings"
+        ],
+        "title": "HealthResponse"
+      },
+      "HealthSnapshot": {
+        "properties": {
+          "snapshot_id": {
+            "type": "string",
+            "title": "Snapshot Id"
+          },
+          "data_mode": {
+            "type": "string",
+            "title": "Data Mode"
+          },
+          "is_mock": {
+            "type": "boolean",
+            "title": "Is Mock"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "snapshot_id",
+          "data_mode",
+          "is_mock"
+        ],
+        "title": "HealthSnapshot"
+      },
+      "MapAdapterStatus": {
+        "properties": {
+          "mode": {
+            "type": "string",
+            "title": "Mode"
+          },
+          "enabled": {
+            "type": "boolean",
+            "title": "Enabled"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "mode",
+          "enabled"
+        ],
+        "title": "MapAdapterStatus"
+      },
+      "MenuCalculationData": {
+        "properties": {
+          "role": {
+            "type": "string",
+            "enum": [
+              "minimum",
+              "maximum",
+              "range"
+            ],
+            "title": "Role"
+          },
+          "menu_item_id": {
+            "type": "string",
+            "title": "Menu Item Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "unit_price": {
+            "type": "integer",
+            "exclusiveMinimum": 0.0,
+            "title": "Unit Price"
+          },
+          "quantity": {
+            "type": "integer",
+            "exclusiveMinimum": 0.0,
+            "title": "Quantity"
+          },
+          "subtotal": {
+            "type": "integer",
+            "exclusiveMinimum": 0.0,
+            "title": "Subtotal"
+          },
+          "mandatory_cost": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Mandatory Cost"
+          },
+          "total_price": {
+            "type": "integer",
+            "exclusiveMinimum": 0.0,
+            "title": "Total Price"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "role",
+          "menu_item_id",
+          "name",
+          "unit_price",
+          "quantity",
+          "subtotal",
+          "mandatory_cost",
+          "total_price"
+        ],
+        "title": "MenuCalculationData"
+      },
+      "MenuItemData": {
+        "properties": {
+          "menu_item_id": {
+            "type": "string",
+            "title": "Menu Item Id"
+          },
+          "place_id": {
+            "type": "string",
+            "title": "Place Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "price_krw": {
+            "type": "integer",
+            "exclusiveMinimum": 0.0,
+            "title": "Price Krw"
+          },
+          "pricing_unit": {
+            "type": "string",
+            "const": "per_person",
+            "title": "Pricing Unit"
+          },
+          "minimum_order": {
+            "type": "integer",
+            "exclusiveMinimum": 0.0,
+            "title": "Minimum Order"
+          },
+          "portion": {
+            "type": "string",
+            "title": "Portion"
+          },
+          "mandatory_cost": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Mandatory Cost"
+          },
+          "confirmed_on": {
+            "type": "string",
+            "title": "Confirmed On"
+          },
+          "confirmed_by_role": {
+            "type": "string",
+            "title": "Confirmed By Role"
+          },
+          "usage_basis": {
+            "type": "string",
+            "title": "Usage Basis"
+          },
+          "source_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Source Url"
+          },
+          "evidence_file": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Evidence File"
+          },
+          "is_budget_candidate": {
+            "type": "boolean",
+            "title": "Is Budget Candidate"
+          },
+          "source_id": {
+            "type": "string",
+            "title": "Source Id"
+          },
+          "is_mock": {
+            "type": "boolean",
+            "title": "Is Mock"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "menu_item_id",
+          "place_id",
+          "name",
+          "price_krw",
+          "pricing_unit",
+          "minimum_order",
+          "portion",
+          "mandatory_cost",
+          "confirmed_on",
+          "confirmed_by_role",
+          "usage_basis",
+          "source_url",
+          "evidence_file",
+          "is_budget_candidate",
+          "source_id",
+          "is_mock"
+        ],
+        "title": "MenuItemData"
+      },
+      "MetaResponse": {
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Request Id"
+          },
+          "snapshot_id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Snapshot Id"
+          },
+          "policy_version": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Policy Version"
+          },
+          "data_mode": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Data Mode"
+          },
+          "reference_now": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Reference Now"
+          },
+          "warnings": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Warnings"
+          },
+          "regions": {
+            "items": {
+              "type": "string",
+              "enum": [
+                "dongseongro",
+                "suseongmot"
+              ]
+            },
+            "type": "array",
+            "title": "Regions"
+          },
+          "categories": {
+            "items": {
+              "type": "string",
+              "enum": [
+                "restaurant",
+                "cafe"
+              ]
+            },
+            "type": "array",
+            "title": "Categories"
+          },
+          "atmosphere_tags": {
+            "items": {
+              "type": "string",
+              "enum": [
+                "quiet",
+                "conversation",
+                "lively",
+                "solo_friendly"
+              ]
+            },
+            "type": "array",
+            "title": "Atmosphere Tags"
+          },
+          "parser_mode": {
+            "type": "string",
+            "title": "Parser Mode"
+          },
+          "explanation_mode": {
+            "type": "string",
+            "title": "Explanation Mode"
+          },
+          "map_mode": {
+            "type": "string",
+            "title": "Map Mode"
+          },
+          "llm": {
+            "$ref": "#/components/schemas/AdapterStatus"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "request_id",
+          "snapshot_id",
+          "policy_version",
+          "data_mode",
+          "reference_now",
+          "warnings",
+          "regions",
+          "categories",
+          "atmosphere_tags",
+          "parser_mode",
+          "explanation_mode",
+          "map_mode",
+          "llm"
+        ],
+        "title": "MetaResponse"
+      },
+      "OpeningDay": {
+        "properties": {
+          "weekday": {
+            "type": "integer",
+            "maximum": 6.0,
+            "minimum": 0.0,
+            "title": "Weekday"
+          },
+          "intervals": {
+            "items": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "type": "array",
+            "title": "Intervals"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "weekday",
+          "intervals"
+        ],
+        "title": "OpeningDay"
+      },
+      "Origin": {
+        "properties": {
+          "latitude": {
+            "type": "number",
+            "maximum": 90.0,
+            "minimum": -90.0,
+            "title": "Latitude"
+          },
+          "longitude": {
+            "type": "number",
+            "maximum": 180.0,
+            "minimum": -180.0,
+            "title": "Longitude"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "latitude",
+          "longitude"
+        ],
+        "title": "Origin"
+      },
+      "ParseDraft": {
+        "properties": {
+          "schema_version": {
+            "type": "string",
+            "const": "2.0",
+            "title": "Schema Version"
+          },
+          "region_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "dongseongro",
+                  "suseongmot"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Region Id"
+          },
+          "category": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "restaurant",
+                  "cafe"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Category"
+          },
+          "purpose": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "meal",
+                  "cafe",
+                  "date",
+                  "friends"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Purpose"
+          },
+          "party_size": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "maximum": 6.0,
+                "minimum": 1.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Party Size"
+          },
+          "budget": {
+            "$ref": "#/components/schemas/DraftBudget"
+          },
+          "visit_at": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Visit At"
+          },
+          "atmosphere_preferences": {
+            "items": {
+              "type": "string",
+              "enum": [
+                "quiet",
+                "conversation",
+                "lively",
+                "solo_friendly"
+              ]
+            },
+            "type": "array",
+            "title": "Atmosphere Preferences"
+          },
+          "required_atmosphere": {
+            "items": {
+              "type": "string",
+              "enum": [
+                "quiet",
+                "conversation",
+                "lively",
+                "solo_friendly"
+              ]
+            },
+            "type": "array",
+            "title": "Required Atmosphere"
+          },
+          "priority_profile": {
+            "type": "string",
+            "const": "balanced",
+            "title": "Priority Profile"
+          },
+          "origin": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Origin"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "radius_m": {
+            "type": "integer",
+            "maximum": 10000.0,
+            "minimum": 100.0,
+            "title": "Radius M"
+          },
+          "confirmed": {
+            "type": "boolean",
+            "const": false,
+            "title": "Confirmed"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "schema_version",
+          "region_id",
+          "category",
+          "purpose",
+          "party_size",
+          "budget",
+          "visit_at",
+          "atmosphere_preferences",
+          "required_atmosphere",
+          "priority_profile",
+          "origin",
+          "radius_m",
+          "confirmed"
+        ],
+        "title": "ParseDraft"
+      },
+      "ParseQueryRequest": {
+        "properties": {
+          "text": {
+            "type": "string",
+            "maxLength": 500,
+            "title": "Text"
+          },
+          "external_ai_consent": {
+            "type": "boolean",
+            "title": "External Ai Consent",
+            "default": false
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "text"
+        ],
+        "title": "ParseQueryRequest"
+      },
+      "ParseResponse": {
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Request Id"
+          },
+          "snapshot_id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Snapshot Id"
+          },
+          "policy_version": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Policy Version"
+          },
+          "data_mode": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Data Mode"
+          },
+          "reference_now": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Reference Now"
+          },
+          "warnings": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Warnings"
+          },
+          "parser_mode": {
+            "type": "string",
+            "title": "Parser Mode"
+          },
+          "draft": {
+            "$ref": "#/components/schemas/ParseDraft"
+          },
+          "field_meta": {
+            "additionalProperties": {
+              "$ref": "#/components/schemas/FieldMeta"
+            },
+            "type": "object",
+            "title": "Field Meta"
+          },
+          "missing_fields": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Missing Fields"
+          },
+          "confirmation_required": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Confirmation Required"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "request_id",
+          "snapshot_id",
+          "policy_version",
+          "data_mode",
+          "reference_now",
+          "warnings",
+          "parser_mode",
+          "draft",
+          "field_meta",
+          "missing_fields",
+          "confirmation_required"
+        ],
+        "title": "ParseResponse"
+      },
+      "PlaceData": {
+        "properties": {
+          "place_id": {
+            "type": "string",
+            "title": "Place Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "region_id": {
+            "type": "string",
+            "enum": [
+              "dongseongro",
+              "suseongmot"
+            ],
+            "title": "Region Id"
+          },
+          "area_id": {
+            "type": "string",
+            "title": "Area Id"
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "restaurant",
+              "cafe"
+            ],
+            "title": "Category"
+          },
+          "address_label": {
+            "type": "string",
+            "title": "Address Label"
+          },
+          "coordinates": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Origin"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "party_min": {
+            "type": "integer",
+            "maximum": 6.0,
+            "minimum": 1.0,
+            "title": "Party Min"
+          },
+          "party_max": {
+            "type": "integer",
+            "maximum": 6.0,
+            "minimum": 1.0,
+            "title": "Party Max"
+          },
+          "purpose_tags": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Purpose Tags"
+          },
+          "atmosphere_tags": {
+            "items": {
+              "type": "string",
+              "enum": [
+                "quiet",
+                "conversation",
+                "lively",
+                "solo_friendly"
+              ]
+            },
+            "type": "array",
+            "title": "Atmosphere Tags"
+          },
+          "opening_weekly": {
+            "items": {
+              "$ref": "#/components/schemas/OpeningDay"
+            },
+            "type": "array",
+            "title": "Opening Weekly"
+          },
+          "opening_observed_at": {
+            "type": "string",
+            "title": "Opening Observed At"
+          },
+          "opening_hours_eligible_for_filter": {
+            "type": "boolean",
+            "title": "Opening Hours Eligible For Filter"
+          },
+          "atmosphere_observed_at": {
+            "type": "string",
+            "title": "Atmosphere Observed At"
+          },
+          "source_id": {
+            "type": "string",
+            "title": "Source Id"
+          },
+          "is_mock": {
+            "type": "boolean",
+            "title": "Is Mock"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "place_id",
+          "name",
+          "region_id",
+          "area_id",
+          "category",
+          "address_label",
+          "coordinates",
+          "party_min",
+          "party_max",
+          "purpose_tags",
+          "atmosphere_tags",
+          "opening_weekly",
+          "opening_observed_at",
+          "opening_hours_eligible_for_filter",
+          "atmosphere_observed_at",
+          "source_id",
+          "is_mock"
+        ],
+        "title": "PlaceData"
+      },
+      "PlaceResponse": {
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Request Id"
+          },
+          "snapshot_id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Snapshot Id"
+          },
+          "policy_version": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Policy Version"
+          },
+          "data_mode": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Data Mode"
+          },
+          "reference_now": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Reference Now"
+          },
+          "warnings": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Warnings"
+          },
+          "place": {
+            "$ref": "#/components/schemas/PlaceData"
+          },
+          "price": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/PriceData"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "evidence": {
+            "items": {
+              "$ref": "#/components/schemas/EvidenceData"
+            },
+            "type": "array",
+            "title": "Evidence"
+          },
+          "area_timeseries": {
+            "items": {
+              "$ref": "#/components/schemas/AreaMetricData"
+            },
+            "type": "array",
+            "title": "Area Timeseries"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "request_id",
+          "snapshot_id",
+          "policy_version",
+          "data_mode",
+          "reference_now",
+          "warnings",
+          "place",
+          "price",
+          "evidence",
+          "area_timeseries"
+        ],
+        "title": "PlaceResponse"
+      },
+      "PriceData": {
+        "properties": {
+          "bundle_id": {
+            "type": "string",
+            "title": "Bundle Id"
+          },
+          "place_id": {
+            "type": "string",
+            "title": "Place Id"
+          },
+          "unit": {
+            "type": "string",
+            "title": "Unit"
+          },
+          "label": {
+            "type": "string",
+            "title": "Label"
+          },
+          "unit_min": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Unit Min"
+          },
+          "unit_max": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Unit Max"
+          },
+          "fixed_fee_min": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Fixed Fee Min"
+          },
+          "fixed_fee_max": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Fixed Fee Max"
+          },
+          "currency": {
+            "type": "string",
+            "const": "KRW",
+            "title": "Currency"
+          },
+          "observed_at": {
+            "type": "string",
+            "title": "Observed At"
+          },
+          "included": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Included"
+          },
+          "excluded": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Excluded"
+          },
+          "source_id": {
+            "type": "string",
+            "title": "Source Id"
+          },
+          "is_mock": {
+            "type": "boolean",
+            "title": "Is Mock"
+          },
+          "menu_items": {
+            "items": {
+              "$ref": "#/components/schemas/MenuItemData"
+            },
+            "type": "array",
+            "title": "Menu Items"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "bundle_id",
+          "place_id",
+          "unit",
+          "label",
+          "unit_min",
+          "unit_max",
+          "fixed_fee_min",
+          "fixed_fee_max",
+          "currency",
+          "observed_at",
+          "included",
+          "excluded",
+          "source_id",
+          "is_mock",
+          "menu_items"
+        ],
+        "title": "PriceData"
+      },
+      "RecommendationItem": {
+        "properties": {
+          "place_id": {
+            "type": "string",
+            "title": "Place Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "region_id": {
+            "type": "string",
+            "enum": [
+              "dongseongro",
+              "suseongmot"
+            ],
+            "title": "Region Id"
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "restaurant",
+              "cafe"
+            ],
+            "title": "Category"
+          },
+          "cost_min": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Cost Min"
+          },
+          "cost_max": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Cost Max"
+          },
+          "per_person_min": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Per Person Min"
+          },
+          "per_person_max": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Per Person Max"
+          },
+          "remaining_min": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Remaining Min"
+          },
+          "remaining_max": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Remaining Max"
+          },
+          "budget_status": {
+            "type": "string",
+            "enum": [
+              "fits",
+              "exceeds",
+              "unknown"
+            ],
+            "title": "Budget Status"
+          },
+          "evidence_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Evidence Ids"
+          },
+          "opening_status": {
+            "type": "string",
+            "enum": [
+              "open",
+              "closed",
+              "unknown"
+            ],
+            "title": "Opening Status"
+          },
+          "is_mock": {
+            "type": "boolean",
+            "title": "Is Mock"
+          },
+          "data_as_of": {
+            "$ref": "#/components/schemas/DataAsOf"
+          },
+          "reasons": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Reasons"
+          },
+          "data_status_reason": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Data Status Reason"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "place_id",
+          "name",
+          "region_id",
+          "category",
+          "cost_min",
+          "cost_max",
+          "per_person_min",
+          "per_person_max",
+          "remaining_min",
+          "remaining_max",
+          "budget_status",
+          "evidence_ids",
+          "opening_status",
+          "is_mock",
+          "data_as_of",
+          "reasons",
+          "data_status_reason"
+        ],
+        "title": "RecommendationItem"
+      },
+      "RecommendationRequest": {
+        "properties": {
+          "conditions": {
+            "$ref": "#/components/schemas/Conditions"
+          },
+          "snapshot_id": {
+            "type": "string",
+            "maxLength": 100,
+            "minLength": 1,
+            "title": "Snapshot Id"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "conditions",
+          "snapshot_id"
+        ],
+        "title": "RecommendationRequest"
+      },
+      "RecommendationResponse": {
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Request Id"
+          },
+          "snapshot_id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Snapshot Id"
+          },
+          "policy_version": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Policy Version"
+          },
+          "data_mode": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Data Mode"
+          },
+          "reference_now": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Reference Now"
+          },
+          "warnings": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Warnings"
+          },
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/RecommendationItem"
+            },
+            "type": "array",
+            "title": "Items"
+          },
+          "insufficient_data_items": {
+            "items": {
+              "$ref": "#/components/schemas/RecommendationItem"
+            },
+            "type": "array",
+            "title": "Insufficient Data Items"
+          },
+          "excluded_counts": {
+            "additionalProperties": {
+              "type": "integer"
+            },
+            "type": "object",
+            "title": "Excluded Counts"
+          },
+          "active_features": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Active Features"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "request_id",
+          "snapshot_id",
+          "policy_version",
+          "data_mode",
+          "reference_now",
+          "warnings",
+          "items",
+          "insufficient_data_items",
+          "excluded_counts",
+          "active_features"
+        ],
+        "title": "RecommendationResponse"
+      }
+    }
+  }
+}

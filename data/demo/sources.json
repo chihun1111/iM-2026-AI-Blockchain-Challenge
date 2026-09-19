@@ -1,0 +1,24 @@
+[
+  {
+    "source_id": "SRC-DEMO-PLACES",
+    "name": "소비나침반 가상 장소·가격·영업정보",
+    "kind": "synthetic",
+    "provider": "팀 기적의 인큐4 시연용",
+    "permission_status": "demo_only",
+    "is_mock": true,
+    "observed_at": "2026-09-18T12:00:00+09:00",
+    "scope": "place",
+    "note": "모든 상호·가격·분위기·영업정보는 가상이며 실제 점포를 지칭하지 않음"
+  },
+  {
+    "source_id": "SRC-DEMO-AREA",
+    "name": "소비나침반 가상 상권 주간 집계",
+    "kind": "synthetic",
+    "provider": "팀 기적의 인큐4 시연용",
+    "permission_status": "demo_only",
+    "is_mock": true,
+    "observed_at": "2026-09-14T09:00:00+09:00",
+    "scope": "area_category_week_daygroup_timebucket",
+    "note": "실제 카드매출·방문인구·주민 이용 자료가 아닌 합성 예시"
+  }
+]

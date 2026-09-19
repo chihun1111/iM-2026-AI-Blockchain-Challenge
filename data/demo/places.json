@@ -1,0 +1,4282 @@
+[
+  {
+    "place_id": "DEMO-D01-01",
+    "name": "데모 동성로 식당 1-1",
+    "region_id": "dongseongro",
+    "area_id": "DEMO-D01",
+    "category": "restaurant",
+    "address_label": "시연용 가상 장소 · 실제 주소 없음",
+    "coordinates": null,
+    "party_min": 1,
+    "party_max": 6,
+    "purpose_tags": [
+      "meal",
+      "friends"
+    ],
+    "atmosphere_tags": [
+      "lively",
+      "conversation"
+    ],
+    "opening_weekly": [
+      {
+        "weekday": 0,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 1,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 2,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 3,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 4,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 5,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 6,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      }
+    ],
+    "opening_exceptions": [],
+    "opening_observed_at": "2026-09-18T12:00:00+09:00",
+    "atmosphere_observed_at": "2026-09-18T12:00:00+09:00",
+    "bundle_id": "BUNDLE-DEMO-D01-01",
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "place_id": "DEMO-D01-02",
+    "name": "데모 동성로 식당 1-2",
+    "region_id": "dongseongro",
+    "area_id": "DEMO-D01",
+    "category": "restaurant",
+    "address_label": "시연용 가상 장소 · 실제 주소 없음",
+    "coordinates": null,
+    "party_min": 1,
+    "party_max": 6,
+    "purpose_tags": [
+      "meal",
+      "friends",
+      "date"
+    ],
+    "atmosphere_tags": [
+      "quiet",
+      "conversation"
+    ],
+    "opening_weekly": [
+      {
+        "weekday": 0,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 1,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 2,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 3,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 4,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 5,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 6,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      }
+    ],
+    "opening_exceptions": [],
+    "opening_observed_at": "2026-09-18T12:00:00+09:00",
+    "atmosphere_observed_at": "2026-09-18T12:00:00+09:00",
+    "bundle_id": "BUNDLE-DEMO-D01-02",
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "place_id": "DEMO-D01-03",
+    "name": "데모 동성로 식당 1-3",
+    "region_id": "dongseongro",
+    "area_id": "DEMO-D01",
+    "category": "restaurant",
+    "address_label": "시연용 가상 장소 · 실제 주소 없음",
+    "coordinates": null,
+    "party_min": 1,
+    "party_max": 6,
+    "purpose_tags": [
+      "meal",
+      "friends"
+    ],
+    "atmosphere_tags": [
+      "solo_friendly"
+    ],
+    "opening_weekly": [
+      {
+        "weekday": 0,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 1,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 2,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 3,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 4,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 5,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 6,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      }
+    ],
+    "opening_exceptions": [],
+    "opening_observed_at": "2026-09-18T12:00:00+09:00",
+    "atmosphere_observed_at": "2026-09-18T12:00:00+09:00",
+    "bundle_id": "BUNDLE-DEMO-D01-03",
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "place_id": "DEMO-D01-04",
+    "name": "데모 동성로 카페 1-4",
+    "region_id": "dongseongro",
+    "area_id": "DEMO-D01",
+    "category": "cafe",
+    "address_label": "시연용 가상 장소 · 실제 주소 없음",
+    "coordinates": null,
+    "party_min": 1,
+    "party_max": 6,
+    "purpose_tags": [
+      "cafe",
+      "friends",
+      "date"
+    ],
+    "atmosphere_tags": [
+      "quiet",
+      "conversation"
+    ],
+    "opening_weekly": [
+      {
+        "weekday": 0,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 1,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 2,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 3,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 4,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 5,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 6,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      }
+    ],
+    "opening_exceptions": [],
+    "opening_observed_at": "2026-09-18T12:00:00+09:00",
+    "atmosphere_observed_at": "2026-09-18T12:00:00+09:00",
+    "bundle_id": "BUNDLE-DEMO-D01-04",
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "place_id": "DEMO-D01-05",
+    "name": "데모 동성로 카페 1-5",
+    "region_id": "dongseongro",
+    "area_id": "DEMO-D01",
+    "category": "cafe",
+    "address_label": "시연용 가상 장소 · 실제 주소 없음",
+    "coordinates": null,
+    "party_min": 1,
+    "party_max": 6,
+    "purpose_tags": [
+      "cafe",
+      "friends"
+    ],
+    "atmosphere_tags": [
+      "lively",
+      "conversation"
+    ],
+    "opening_weekly": [
+      {
+        "weekday": 0,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 1,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 2,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 3,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 4,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 5,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 6,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      }
+    ],
+    "opening_exceptions": [],
+    "opening_observed_at": "2026-09-18T12:00:00+09:00",
+    "atmosphere_observed_at": "2026-09-18T12:00:00+09:00",
+    "bundle_id": "BUNDLE-DEMO-D01-05",
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "place_id": "DEMO-D02-01",
+    "name": "데모 동성로 식당 2-1",
+    "region_id": "dongseongro",
+    "area_id": "DEMO-D02",
+    "category": "restaurant",
+    "address_label": "시연용 가상 장소 · 실제 주소 없음",
+    "coordinates": null,
+    "party_min": 1,
+    "party_max": 6,
+    "purpose_tags": [
+      "meal",
+      "friends"
+    ],
+    "atmosphere_tags": [
+      "lively",
+      "conversation"
+    ],
+    "opening_weekly": [
+      {
+        "weekday": 0,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 1,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 2,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 3,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 4,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 5,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 6,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      }
+    ],
+    "opening_exceptions": [],
+    "opening_observed_at": "2026-09-18T12:00:00+09:00",
+    "atmosphere_observed_at": "2026-09-18T12:00:00+09:00",
+    "bundle_id": "BUNDLE-DEMO-D02-01",
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "place_id": "DEMO-D02-02",
+    "name": "데모 동성로 식당 2-2",
+    "region_id": "dongseongro",
+    "area_id": "DEMO-D02",
+    "category": "restaurant",
+    "address_label": "시연용 가상 장소 · 실제 주소 없음",
+    "coordinates": null,
+    "party_min": 1,
+    "party_max": 6,
+    "purpose_tags": [
+      "meal",
+      "friends",
+      "date"
+    ],
+    "atmosphere_tags": [
+      "quiet",
+      "conversation"
+    ],
+    "opening_weekly": [
+      {
+        "weekday": 0,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 1,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 2,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 3,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 4,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 5,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 6,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      }
+    ],
+    "opening_exceptions": [],
+    "opening_observed_at": "2026-09-18T12:00:00+09:00",
+    "atmosphere_observed_at": "2026-09-18T12:00:00+09:00",
+    "bundle_id": "BUNDLE-DEMO-D02-02",
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "place_id": "DEMO-D02-03",
+    "name": "데모 동성로 식당 2-3",
+    "region_id": "dongseongro",
+    "area_id": "DEMO-D02",
+    "category": "restaurant",
+    "address_label": "시연용 가상 장소 · 실제 주소 없음",
+    "coordinates": null,
+    "party_min": 1,
+    "party_max": 6,
+    "purpose_tags": [
+      "meal",
+      "friends"
+    ],
+    "atmosphere_tags": [
+      "solo_friendly"
+    ],
+    "opening_weekly": [
+      {
+        "weekday": 0,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 1,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 2,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 3,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 4,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 5,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 6,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      }
+    ],
+    "opening_exceptions": [],
+    "opening_observed_at": "2026-09-18T12:00:00+09:00",
+    "atmosphere_observed_at": "2026-09-18T12:00:00+09:00",
+    "bundle_id": "BUNDLE-DEMO-D02-03",
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "place_id": "DEMO-D02-04",
+    "name": "데모 동성로 카페 2-4",
+    "region_id": "dongseongro",
+    "area_id": "DEMO-D02",
+    "category": "cafe",
+    "address_label": "시연용 가상 장소 · 실제 주소 없음",
+    "coordinates": null,
+    "party_min": 1,
+    "party_max": 6,
+    "purpose_tags": [
+      "cafe",
+      "friends",
+      "date"
+    ],
+    "atmosphere_tags": [
+      "quiet",
+      "conversation"
+    ],
+    "opening_weekly": [
+      {
+        "weekday": 0,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 1,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 2,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 3,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 4,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 5,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 6,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      }
+    ],
+    "opening_exceptions": [],
+    "opening_observed_at": "2026-09-18T12:00:00+09:00",
+    "atmosphere_observed_at": "2026-09-18T12:00:00+09:00",
+    "bundle_id": "BUNDLE-DEMO-D02-04",
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "place_id": "DEMO-D02-05",
+    "name": "데모 동성로 카페 2-5",
+    "region_id": "dongseongro",
+    "area_id": "DEMO-D02",
+    "category": "cafe",
+    "address_label": "시연용 가상 장소 · 실제 주소 없음",
+    "coordinates": null,
+    "party_min": 1,
+    "party_max": 6,
+    "purpose_tags": [
+      "cafe",
+      "friends"
+    ],
+    "atmosphere_tags": [
+      "lively",
+      "conversation"
+    ],
+    "opening_weekly": [
+      {
+        "weekday": 0,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 1,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 2,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 3,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 4,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 5,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 6,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      }
+    ],
+    "opening_exceptions": [],
+    "opening_observed_at": "2026-09-18T12:00:00+09:00",
+    "atmosphere_observed_at": "2026-09-18T12:00:00+09:00",
+    "bundle_id": "BUNDLE-DEMO-D02-05",
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "place_id": "DEMO-D03-01",
+    "name": "데모 동성로 식당 3-1",
+    "region_id": "dongseongro",
+    "area_id": "DEMO-D03",
+    "category": "restaurant",
+    "address_label": "시연용 가상 장소 · 실제 주소 없음",
+    "coordinates": null,
+    "party_min": 1,
+    "party_max": 6,
+    "purpose_tags": [
+      "meal",
+      "friends"
+    ],
+    "atmosphere_tags": [
+      "lively",
+      "conversation"
+    ],
+    "opening_weekly": [
+      {
+        "weekday": 0,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 1,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 2,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 3,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 4,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 5,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 6,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      }
+    ],
+    "opening_exceptions": [],
+    "opening_observed_at": "2026-09-18T12:00:00+09:00",
+    "atmosphere_observed_at": "2026-09-18T12:00:00+09:00",
+    "bundle_id": "BUNDLE-DEMO-D03-01",
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "place_id": "DEMO-D03-02",
+    "name": "데모 동성로 식당 3-2",
+    "region_id": "dongseongro",
+    "area_id": "DEMO-D03",
+    "category": "restaurant",
+    "address_label": "시연용 가상 장소 · 실제 주소 없음",
+    "coordinates": null,
+    "party_min": 1,
+    "party_max": 6,
+    "purpose_tags": [
+      "meal",
+      "friends",
+      "date"
+    ],
+    "atmosphere_tags": [
+      "quiet",
+      "conversation"
+    ],
+    "opening_weekly": [
+      {
+        "weekday": 0,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 1,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 2,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 3,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 4,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 5,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 6,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      }
+    ],
+    "opening_exceptions": [],
+    "opening_observed_at": "2026-09-18T12:00:00+09:00",
+    "atmosphere_observed_at": "2026-09-18T12:00:00+09:00",
+    "bundle_id": "BUNDLE-DEMO-D03-02",
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "place_id": "DEMO-D03-03",
+    "name": "데모 동성로 식당 3-3",
+    "region_id": "dongseongro",
+    "area_id": "DEMO-D03",
+    "category": "restaurant",
+    "address_label": "시연용 가상 장소 · 실제 주소 없음",
+    "coordinates": null,
+    "party_min": 1,
+    "party_max": 6,
+    "purpose_tags": [
+      "meal",
+      "friends"
+    ],
+    "atmosphere_tags": [
+      "solo_friendly"
+    ],
+    "opening_weekly": [
+      {
+        "weekday": 0,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 1,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 2,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 3,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 4,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 5,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 6,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      }
+    ],
+    "opening_exceptions": [],
+    "opening_observed_at": "2026-09-18T12:00:00+09:00",
+    "atmosphere_observed_at": "2026-09-18T12:00:00+09:00",
+    "bundle_id": "BUNDLE-DEMO-D03-03",
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "place_id": "DEMO-D03-04",
+    "name": "데모 동성로 카페 3-4",
+    "region_id": "dongseongro",
+    "area_id": "DEMO-D03",
+    "category": "cafe",
+    "address_label": "시연용 가상 장소 · 실제 주소 없음",
+    "coordinates": null,
+    "party_min": 1,
+    "party_max": 6,
+    "purpose_tags": [
+      "cafe",
+      "friends",
+      "date"
+    ],
+    "atmosphere_tags": [
+      "quiet",
+      "conversation"
+    ],
+    "opening_weekly": [
+      {
+        "weekday": 0,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 1,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 2,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 3,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 4,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 5,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 6,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      }
+    ],
+    "opening_exceptions": [],
+    "opening_observed_at": "2026-09-18T12:00:00+09:00",
+    "atmosphere_observed_at": "2026-09-18T12:00:00+09:00",
+    "bundle_id": "BUNDLE-DEMO-D03-04",
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "place_id": "DEMO-D03-05",
+    "name": "데모 동성로 카페 3-5",
+    "region_id": "dongseongro",
+    "area_id": "DEMO-D03",
+    "category": "cafe",
+    "address_label": "시연용 가상 장소 · 실제 주소 없음",
+    "coordinates": null,
+    "party_min": 1,
+    "party_max": 6,
+    "purpose_tags": [
+      "cafe",
+      "friends"
+    ],
+    "atmosphere_tags": [
+      "lively",
+      "conversation"
+    ],
+    "opening_weekly": [
+      {
+        "weekday": 0,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 1,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 2,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 3,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 4,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 5,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 6,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      }
+    ],
+    "opening_exceptions": [],
+    "opening_observed_at": "2026-09-18T12:00:00+09:00",
+    "atmosphere_observed_at": "2026-09-18T12:00:00+09:00",
+    "bundle_id": "BUNDLE-DEMO-D03-05",
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "place_id": "DEMO-D04-01",
+    "name": "데모 동성로 식당 4-1",
+    "region_id": "dongseongro",
+    "area_id": "DEMO-D04",
+    "category": "restaurant",
+    "address_label": "시연용 가상 장소 · 실제 주소 없음",
+    "coordinates": null,
+    "party_min": 1,
+    "party_max": 6,
+    "purpose_tags": [
+      "meal",
+      "friends"
+    ],
+    "atmosphere_tags": [
+      "lively",
+      "conversation"
+    ],
+    "opening_weekly": [
+      {
+        "weekday": 0,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 1,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 2,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 3,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 4,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 5,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 6,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      }
+    ],
+    "opening_exceptions": [],
+    "opening_observed_at": "2026-09-18T12:00:00+09:00",
+    "atmosphere_observed_at": "2026-09-18T12:00:00+09:00",
+    "bundle_id": "BUNDLE-DEMO-D04-01",
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "place_id": "DEMO-D04-02",
+    "name": "데모 동성로 식당 4-2",
+    "region_id": "dongseongro",
+    "area_id": "DEMO-D04",
+    "category": "restaurant",
+    "address_label": "시연용 가상 장소 · 실제 주소 없음",
+    "coordinates": null,
+    "party_min": 1,
+    "party_max": 6,
+    "purpose_tags": [
+      "meal",
+      "friends",
+      "date"
+    ],
+    "atmosphere_tags": [
+      "quiet",
+      "conversation"
+    ],
+    "opening_weekly": [
+      {
+        "weekday": 0,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 1,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 2,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 3,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 4,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 5,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 6,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      }
+    ],
+    "opening_exceptions": [],
+    "opening_observed_at": "2026-09-18T12:00:00+09:00",
+    "atmosphere_observed_at": "2026-09-18T12:00:00+09:00",
+    "bundle_id": "BUNDLE-DEMO-D04-02",
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "place_id": "DEMO-D04-03",
+    "name": "데모 동성로 식당 4-3",
+    "region_id": "dongseongro",
+    "area_id": "DEMO-D04",
+    "category": "restaurant",
+    "address_label": "시연용 가상 장소 · 실제 주소 없음",
+    "coordinates": null,
+    "party_min": 1,
+    "party_max": 6,
+    "purpose_tags": [
+      "meal",
+      "friends"
+    ],
+    "atmosphere_tags": [
+      "solo_friendly"
+    ],
+    "opening_weekly": [
+      {
+        "weekday": 0,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 1,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 2,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 3,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 4,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 5,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 6,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      }
+    ],
+    "opening_exceptions": [],
+    "opening_observed_at": "2026-09-18T12:00:00+09:00",
+    "atmosphere_observed_at": "2026-09-18T12:00:00+09:00",
+    "bundle_id": "BUNDLE-DEMO-D04-03",
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "place_id": "DEMO-D04-04",
+    "name": "데모 동성로 카페 4-4",
+    "region_id": "dongseongro",
+    "area_id": "DEMO-D04",
+    "category": "cafe",
+    "address_label": "시연용 가상 장소 · 실제 주소 없음",
+    "coordinates": null,
+    "party_min": 1,
+    "party_max": 6,
+    "purpose_tags": [
+      "cafe",
+      "friends",
+      "date"
+    ],
+    "atmosphere_tags": [
+      "quiet",
+      "conversation"
+    ],
+    "opening_weekly": [
+      {
+        "weekday": 0,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 1,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 2,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 3,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 4,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 5,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 6,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      }
+    ],
+    "opening_exceptions": [],
+    "opening_observed_at": "2026-09-18T12:00:00+09:00",
+    "atmosphere_observed_at": "2026-09-18T12:00:00+09:00",
+    "bundle_id": "BUNDLE-DEMO-D04-04",
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "place_id": "DEMO-D04-05",
+    "name": "데모 동성로 카페 4-5",
+    "region_id": "dongseongro",
+    "area_id": "DEMO-D04",
+    "category": "cafe",
+    "address_label": "시연용 가상 장소 · 실제 주소 없음",
+    "coordinates": null,
+    "party_min": 1,
+    "party_max": 6,
+    "purpose_tags": [
+      "cafe",
+      "friends"
+    ],
+    "atmosphere_tags": [
+      "lively",
+      "conversation"
+    ],
+    "opening_weekly": [
+      {
+        "weekday": 0,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 1,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 2,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 3,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 4,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 5,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 6,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      }
+    ],
+    "opening_exceptions": [],
+    "opening_observed_at": "2026-09-18T12:00:00+09:00",
+    "atmosphere_observed_at": "2026-09-18T12:00:00+09:00",
+    "bundle_id": "BUNDLE-DEMO-D04-05",
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "place_id": "DEMO-S01-01",
+    "name": "데모 수성못 식당 1-1",
+    "region_id": "suseongmot",
+    "area_id": "DEMO-S01",
+    "category": "restaurant",
+    "address_label": "시연용 가상 장소 · 실제 주소 없음",
+    "coordinates": null,
+    "party_min": 1,
+    "party_max": 6,
+    "purpose_tags": [
+      "meal",
+      "friends"
+    ],
+    "atmosphere_tags": [
+      "lively",
+      "conversation"
+    ],
+    "opening_weekly": [
+      {
+        "weekday": 0,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 1,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 2,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 3,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 4,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 5,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 6,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      }
+    ],
+    "opening_exceptions": [],
+    "opening_observed_at": "2026-09-18T12:00:00+09:00",
+    "atmosphere_observed_at": "2026-09-18T12:00:00+09:00",
+    "bundle_id": "BUNDLE-DEMO-S01-01",
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "place_id": "DEMO-S01-02",
+    "name": "데모 수성못 식당 1-2",
+    "region_id": "suseongmot",
+    "area_id": "DEMO-S01",
+    "category": "restaurant",
+    "address_label": "시연용 가상 장소 · 실제 주소 없음",
+    "coordinates": null,
+    "party_min": 1,
+    "party_max": 6,
+    "purpose_tags": [
+      "meal",
+      "friends",
+      "date"
+    ],
+    "atmosphere_tags": [
+      "quiet",
+      "conversation"
+    ],
+    "opening_weekly": [
+      {
+        "weekday": 0,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 1,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 2,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 3,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 4,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 5,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 6,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      }
+    ],
+    "opening_exceptions": [],
+    "opening_observed_at": "2026-09-18T12:00:00+09:00",
+    "atmosphere_observed_at": "2026-09-18T12:00:00+09:00",
+    "bundle_id": "BUNDLE-DEMO-S01-02",
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "place_id": "DEMO-S01-03",
+    "name": "데모 수성못 식당 1-3",
+    "region_id": "suseongmot",
+    "area_id": "DEMO-S01",
+    "category": "restaurant",
+    "address_label": "시연용 가상 장소 · 실제 주소 없음",
+    "coordinates": null,
+    "party_min": 1,
+    "party_max": 6,
+    "purpose_tags": [
+      "meal",
+      "friends"
+    ],
+    "atmosphere_tags": [
+      "solo_friendly"
+    ],
+    "opening_weekly": [
+      {
+        "weekday": 0,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 1,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 2,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 3,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 4,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 5,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 6,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      }
+    ],
+    "opening_exceptions": [],
+    "opening_observed_at": "2026-09-18T12:00:00+09:00",
+    "atmosphere_observed_at": "2026-09-18T12:00:00+09:00",
+    "bundle_id": "BUNDLE-DEMO-S01-03",
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "place_id": "DEMO-S01-04",
+    "name": "데모 수성못 카페 1-4",
+    "region_id": "suseongmot",
+    "area_id": "DEMO-S01",
+    "category": "cafe",
+    "address_label": "시연용 가상 장소 · 실제 주소 없음",
+    "coordinates": null,
+    "party_min": 1,
+    "party_max": 6,
+    "purpose_tags": [
+      "cafe",
+      "friends",
+      "date"
+    ],
+    "atmosphere_tags": [
+      "quiet",
+      "conversation"
+    ],
+    "opening_weekly": [
+      {
+        "weekday": 0,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 1,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 2,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 3,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 4,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 5,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 6,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      }
+    ],
+    "opening_exceptions": [],
+    "opening_observed_at": "2026-09-18T12:00:00+09:00",
+    "atmosphere_observed_at": "2026-09-18T12:00:00+09:00",
+    "bundle_id": "BUNDLE-DEMO-S01-04",
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "place_id": "DEMO-S01-05",
+    "name": "데모 수성못 카페 1-5",
+    "region_id": "suseongmot",
+    "area_id": "DEMO-S01",
+    "category": "cafe",
+    "address_label": "시연용 가상 장소 · 실제 주소 없음",
+    "coordinates": null,
+    "party_min": 1,
+    "party_max": 6,
+    "purpose_tags": [
+      "cafe",
+      "friends"
+    ],
+    "atmosphere_tags": [
+      "lively",
+      "conversation"
+    ],
+    "opening_weekly": [
+      {
+        "weekday": 0,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 1,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 2,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 3,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 4,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 5,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 6,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      }
+    ],
+    "opening_exceptions": [],
+    "opening_observed_at": "2026-09-18T12:00:00+09:00",
+    "atmosphere_observed_at": "2026-09-18T12:00:00+09:00",
+    "bundle_id": "BUNDLE-DEMO-S01-05",
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "place_id": "DEMO-S02-01",
+    "name": "데모 수성못 식당 2-1",
+    "region_id": "suseongmot",
+    "area_id": "DEMO-S02",
+    "category": "restaurant",
+    "address_label": "시연용 가상 장소 · 실제 주소 없음",
+    "coordinates": null,
+    "party_min": 1,
+    "party_max": 6,
+    "purpose_tags": [
+      "meal",
+      "friends"
+    ],
+    "atmosphere_tags": [
+      "lively",
+      "conversation"
+    ],
+    "opening_weekly": [
+      {
+        "weekday": 0,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 1,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 2,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 3,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 4,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 5,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 6,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      }
+    ],
+    "opening_exceptions": [],
+    "opening_observed_at": "2026-09-18T12:00:00+09:00",
+    "atmosphere_observed_at": "2026-09-18T12:00:00+09:00",
+    "bundle_id": "BUNDLE-DEMO-S02-01",
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "place_id": "DEMO-S02-02",
+    "name": "데모 수성못 식당 2-2",
+    "region_id": "suseongmot",
+    "area_id": "DEMO-S02",
+    "category": "restaurant",
+    "address_label": "시연용 가상 장소 · 실제 주소 없음",
+    "coordinates": null,
+    "party_min": 1,
+    "party_max": 6,
+    "purpose_tags": [
+      "meal",
+      "friends",
+      "date"
+    ],
+    "atmosphere_tags": [
+      "quiet",
+      "conversation"
+    ],
+    "opening_weekly": [
+      {
+        "weekday": 0,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 1,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 2,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 3,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 4,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 5,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 6,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      }
+    ],
+    "opening_exceptions": [],
+    "opening_observed_at": "2026-09-18T12:00:00+09:00",
+    "atmosphere_observed_at": "2026-09-18T12:00:00+09:00",
+    "bundle_id": "BUNDLE-DEMO-S02-02",
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "place_id": "DEMO-S02-03",
+    "name": "데모 수성못 식당 2-3",
+    "region_id": "suseongmot",
+    "area_id": "DEMO-S02",
+    "category": "restaurant",
+    "address_label": "시연용 가상 장소 · 실제 주소 없음",
+    "coordinates": null,
+    "party_min": 1,
+    "party_max": 6,
+    "purpose_tags": [
+      "meal",
+      "friends"
+    ],
+    "atmosphere_tags": [
+      "solo_friendly"
+    ],
+    "opening_weekly": [
+      {
+        "weekday": 0,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 1,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 2,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 3,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 4,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 5,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 6,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      }
+    ],
+    "opening_exceptions": [],
+    "opening_observed_at": "2026-09-18T12:00:00+09:00",
+    "atmosphere_observed_at": "2026-09-18T12:00:00+09:00",
+    "bundle_id": "BUNDLE-DEMO-S02-03",
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "place_id": "DEMO-S02-04",
+    "name": "데모 수성못 카페 2-4",
+    "region_id": "suseongmot",
+    "area_id": "DEMO-S02",
+    "category": "cafe",
+    "address_label": "시연용 가상 장소 · 실제 주소 없음",
+    "coordinates": null,
+    "party_min": 1,
+    "party_max": 6,
+    "purpose_tags": [
+      "cafe",
+      "friends",
+      "date"
+    ],
+    "atmosphere_tags": [
+      "quiet",
+      "conversation"
+    ],
+    "opening_weekly": [
+      {
+        "weekday": 0,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 1,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 2,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 3,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 4,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 5,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 6,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      }
+    ],
+    "opening_exceptions": [],
+    "opening_observed_at": "2026-09-18T12:00:00+09:00",
+    "atmosphere_observed_at": "2026-09-18T12:00:00+09:00",
+    "bundle_id": "BUNDLE-DEMO-S02-04",
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "place_id": "DEMO-S02-05",
+    "name": "데모 수성못 카페 2-5",
+    "region_id": "suseongmot",
+    "area_id": "DEMO-S02",
+    "category": "cafe",
+    "address_label": "시연용 가상 장소 · 실제 주소 없음",
+    "coordinates": null,
+    "party_min": 1,
+    "party_max": 6,
+    "purpose_tags": [
+      "cafe",
+      "friends"
+    ],
+    "atmosphere_tags": [
+      "lively",
+      "conversation"
+    ],
+    "opening_weekly": [
+      {
+        "weekday": 0,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 1,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 2,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 3,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 4,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 5,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 6,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      }
+    ],
+    "opening_exceptions": [],
+    "opening_observed_at": "2026-09-18T12:00:00+09:00",
+    "atmosphere_observed_at": "2026-09-18T12:00:00+09:00",
+    "bundle_id": "BUNDLE-DEMO-S02-05",
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "place_id": "DEMO-S03-01",
+    "name": "데모 수성못 식당 3-1",
+    "region_id": "suseongmot",
+    "area_id": "DEMO-S03",
+    "category": "restaurant",
+    "address_label": "시연용 가상 장소 · 실제 주소 없음",
+    "coordinates": null,
+    "party_min": 1,
+    "party_max": 6,
+    "purpose_tags": [
+      "meal",
+      "friends"
+    ],
+    "atmosphere_tags": [
+      "lively",
+      "conversation"
+    ],
+    "opening_weekly": [
+      {
+        "weekday": 0,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 1,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 2,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 3,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 4,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 5,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 6,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      }
+    ],
+    "opening_exceptions": [],
+    "opening_observed_at": "2026-09-18T12:00:00+09:00",
+    "atmosphere_observed_at": "2026-09-18T12:00:00+09:00",
+    "bundle_id": "BUNDLE-DEMO-S03-01",
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "place_id": "DEMO-S03-02",
+    "name": "데모 수성못 식당 3-2",
+    "region_id": "suseongmot",
+    "area_id": "DEMO-S03",
+    "category": "restaurant",
+    "address_label": "시연용 가상 장소 · 실제 주소 없음",
+    "coordinates": null,
+    "party_min": 1,
+    "party_max": 6,
+    "purpose_tags": [
+      "meal",
+      "friends",
+      "date"
+    ],
+    "atmosphere_tags": [
+      "quiet",
+      "conversation"
+    ],
+    "opening_weekly": [
+      {
+        "weekday": 0,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 1,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 2,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 3,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 4,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 5,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 6,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      }
+    ],
+    "opening_exceptions": [],
+    "opening_observed_at": "2026-09-18T12:00:00+09:00",
+    "atmosphere_observed_at": "2026-09-18T12:00:00+09:00",
+    "bundle_id": "BUNDLE-DEMO-S03-02",
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "place_id": "DEMO-S03-03",
+    "name": "데모 수성못 식당 3-3",
+    "region_id": "suseongmot",
+    "area_id": "DEMO-S03",
+    "category": "restaurant",
+    "address_label": "시연용 가상 장소 · 실제 주소 없음",
+    "coordinates": null,
+    "party_min": 1,
+    "party_max": 6,
+    "purpose_tags": [
+      "meal",
+      "friends"
+    ],
+    "atmosphere_tags": [
+      "solo_friendly"
+    ],
+    "opening_weekly": [
+      {
+        "weekday": 0,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 1,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 2,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 3,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 4,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 5,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 6,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      }
+    ],
+    "opening_exceptions": [],
+    "opening_observed_at": "2026-09-18T12:00:00+09:00",
+    "atmosphere_observed_at": "2026-09-18T12:00:00+09:00",
+    "bundle_id": "BUNDLE-DEMO-S03-03",
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "place_id": "DEMO-S03-04",
+    "name": "데모 수성못 카페 3-4",
+    "region_id": "suseongmot",
+    "area_id": "DEMO-S03",
+    "category": "cafe",
+    "address_label": "시연용 가상 장소 · 실제 주소 없음",
+    "coordinates": null,
+    "party_min": 1,
+    "party_max": 6,
+    "purpose_tags": [
+      "cafe",
+      "friends",
+      "date"
+    ],
+    "atmosphere_tags": [
+      "quiet",
+      "conversation"
+    ],
+    "opening_weekly": [
+      {
+        "weekday": 0,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 1,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 2,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 3,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 4,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 5,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 6,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      }
+    ],
+    "opening_exceptions": [],
+    "opening_observed_at": "2026-09-18T12:00:00+09:00",
+    "atmosphere_observed_at": "2026-09-18T12:00:00+09:00",
+    "bundle_id": "BUNDLE-DEMO-S03-04",
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "place_id": "DEMO-S03-05",
+    "name": "데모 수성못 카페 3-5",
+    "region_id": "suseongmot",
+    "area_id": "DEMO-S03",
+    "category": "cafe",
+    "address_label": "시연용 가상 장소 · 실제 주소 없음",
+    "coordinates": null,
+    "party_min": 1,
+    "party_max": 6,
+    "purpose_tags": [
+      "cafe",
+      "friends"
+    ],
+    "atmosphere_tags": [
+      "lively",
+      "conversation"
+    ],
+    "opening_weekly": [
+      {
+        "weekday": 0,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 1,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 2,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 3,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 4,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 5,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 6,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      }
+    ],
+    "opening_exceptions": [],
+    "opening_observed_at": "2026-09-18T12:00:00+09:00",
+    "atmosphere_observed_at": "2026-09-18T12:00:00+09:00",
+    "bundle_id": "BUNDLE-DEMO-S03-05",
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "place_id": "DEMO-S04-01",
+    "name": "데모 수성못 식당 4-1",
+    "region_id": "suseongmot",
+    "area_id": "DEMO-S04",
+    "category": "restaurant",
+    "address_label": "시연용 가상 장소 · 실제 주소 없음",
+    "coordinates": null,
+    "party_min": 1,
+    "party_max": 6,
+    "purpose_tags": [
+      "meal",
+      "friends"
+    ],
+    "atmosphere_tags": [
+      "lively",
+      "conversation"
+    ],
+    "opening_weekly": [
+      {
+        "weekday": 0,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 1,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 2,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 3,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 4,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 5,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 6,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      }
+    ],
+    "opening_exceptions": [],
+    "opening_observed_at": "2026-09-18T12:00:00+09:00",
+    "atmosphere_observed_at": "2026-09-18T12:00:00+09:00",
+    "bundle_id": "BUNDLE-DEMO-S04-01",
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "place_id": "DEMO-S04-02",
+    "name": "데모 수성못 식당 4-2",
+    "region_id": "suseongmot",
+    "area_id": "DEMO-S04",
+    "category": "restaurant",
+    "address_label": "시연용 가상 장소 · 실제 주소 없음",
+    "coordinates": null,
+    "party_min": 1,
+    "party_max": 6,
+    "purpose_tags": [
+      "meal",
+      "friends",
+      "date"
+    ],
+    "atmosphere_tags": [
+      "quiet",
+      "conversation"
+    ],
+    "opening_weekly": [
+      {
+        "weekday": 0,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 1,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 2,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 3,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 4,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 5,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 6,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      }
+    ],
+    "opening_exceptions": [],
+    "opening_observed_at": "2026-09-18T12:00:00+09:00",
+    "atmosphere_observed_at": "2026-09-18T12:00:00+09:00",
+    "bundle_id": "BUNDLE-DEMO-S04-02",
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "place_id": "DEMO-S04-03",
+    "name": "데모 수성못 식당 4-3",
+    "region_id": "suseongmot",
+    "area_id": "DEMO-S04",
+    "category": "restaurant",
+    "address_label": "시연용 가상 장소 · 실제 주소 없음",
+    "coordinates": null,
+    "party_min": 1,
+    "party_max": 6,
+    "purpose_tags": [
+      "meal",
+      "friends"
+    ],
+    "atmosphere_tags": [
+      "solo_friendly"
+    ],
+    "opening_weekly": [
+      {
+        "weekday": 0,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 1,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 2,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 3,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 4,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 5,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 6,
+        "intervals": [
+          [
+            "11:00",
+            "15:00"
+          ],
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
+      }
+    ],
+    "opening_exceptions": [],
+    "opening_observed_at": "2026-09-18T12:00:00+09:00",
+    "atmosphere_observed_at": "2026-09-18T12:00:00+09:00",
+    "bundle_id": "BUNDLE-DEMO-S04-03",
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "place_id": "DEMO-S04-04",
+    "name": "데모 수성못 카페 4-4",
+    "region_id": "suseongmot",
+    "area_id": "DEMO-S04",
+    "category": "cafe",
+    "address_label": "시연용 가상 장소 · 실제 주소 없음",
+    "coordinates": null,
+    "party_min": 1,
+    "party_max": 6,
+    "purpose_tags": [
+      "cafe",
+      "friends",
+      "date"
+    ],
+    "atmosphere_tags": [
+      "quiet",
+      "conversation"
+    ],
+    "opening_weekly": [
+      {
+        "weekday": 0,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 1,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 2,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 3,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 4,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 5,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 6,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      }
+    ],
+    "opening_exceptions": [],
+    "opening_observed_at": "2026-09-18T12:00:00+09:00",
+    "atmosphere_observed_at": "2026-09-18T12:00:00+09:00",
+    "bundle_id": "BUNDLE-DEMO-S04-04",
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "place_id": "DEMO-S04-05",
+    "name": "데모 수성못 카페 4-5",
+    "region_id": "suseongmot",
+    "area_id": "DEMO-S04",
+    "category": "cafe",
+    "address_label": "시연용 가상 장소 · 실제 주소 없음",
+    "coordinates": null,
+    "party_min": 1,
+    "party_max": 6,
+    "purpose_tags": [
+      "cafe",
+      "friends"
+    ],
+    "atmosphere_tags": [
+      "lively",
+      "conversation"
+    ],
+    "opening_weekly": [
+      {
+        "weekday": 0,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 1,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 2,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 3,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 4,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 5,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      {
+        "weekday": 6,
+        "intervals": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      }
+    ],
+    "opening_exceptions": [],
+    "opening_observed_at": "2026-09-18T12:00:00+09:00",
+    "atmosphere_observed_at": "2026-09-18T12:00:00+09:00",
+    "bundle_id": "BUNDLE-DEMO-S04-05",
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  }
+]

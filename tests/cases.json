@@ -1,0 +1,398 @@
+{
+  "spec_version": "2.0",
+  "note": "테스트 설계이며 앱 구현 테스트는 아직 실행되지 않았음",
+  "cases": [
+    {
+      "id": "D01",
+      "area": "data",
+      "scenario": "원본 JSON을 읽고 manifest와 대조",
+      "expected": "places=40, price_bundles=40, area_metrics=768, areas=8, sources=2; 파일 해시 일치",
+      "gate": "P0",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "D02",
+      "area": "data",
+      "scenario": "장소·가격·집계의 외래키 및 복합키 검사",
+      "expected": "존재하지 않는 place/area/source 참조 0개, 중복 PK·집계키 0개",
+      "gate": "P0",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "D03",
+      "area": "data",
+      "scenario": "데모 시드를 같은 DB에 2회 적재",
+      "expected": "행 수·내용 동일, 중복 0개",
+      "gate": "P0",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "D04",
+      "area": "data",
+      "scenario": "real 스냅샷에 is_mock=true 행 삽입 시도",
+      "expected": "적재 거부. real 응답에서 demo 값 자동 사용 금지",
+      "gate": "P0",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "D05",
+      "area": "data",
+      "scenario": "집계 1주 누락 또는 결제건수 음수",
+      "expected": "원본을 0으로 채우지 않음. 해당 지표 격리·미산정",
+      "gate": "P0",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "D06",
+      "area": "data",
+      "scenario": "가상 장소 주소·좌표·명칭 표시",
+      "expected": "가상 배지와 주소 없음 표시, 실제 길찾기 불가",
+      "gate": "P0",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "B01",
+      "area": "budget",
+      "scenario": "2명, 인당 20000, 단가 15000~18000, 고정비 0",
+      "expected": "총예산 40000, 비용 30000~36000, 잔여 4000~10000, fits",
+      "gate": "P0",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "B02",
+      "area": "budget",
+      "scenario": "B=36000, U=36000",
+      "expected": "fits, remaining_min=0",
+      "gate": "P0",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "B03",
+      "area": "budget",
+      "scenario": "B=35999, U=36000",
+      "expected": "exceeds, remaining_min=-1; 기본 추천 제외",
+      "gate": "P0",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "B04",
+      "area": "budget",
+      "scenario": "2명, 단가 상한18000, 필수 고정비5000, 총예산40000",
+      "expected": "cost_max=41000, exceeds",
+      "gate": "P0",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "B05",
+      "area": "budget",
+      "scenario": "가격 누락·확인일 30일 초과·미확인 필수비용",
+      "expected": "unknown; 예산 충족 표시 금지",
+      "gate": "P0",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "B06",
+      "area": "budget",
+      "scenario": "예산 0·음수·소수·문자, 인원0·7·소수",
+      "expected": "422, 필드별 오류 경로",
+      "gate": "P0",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "B07",
+      "area": "budget",
+      "scenario": "클라이언트가 place_id와 함께 가짜 가격 전송",
+      "expected": "정의되지 않은 가격 필드는 422 또는 무시하지 않고 계약상 거부. 서버 정가 재계산",
+      "gate": "P0",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "B08",
+      "area": "budget",
+      "scenario": "대안 3개 추가",
+      "expected": "각 대안 비용 개별 표시; 3개 합산 없음",
+      "gate": "P0",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "B09",
+      "area": "budget",
+      "scenario": "3명, 단가10000, 고정비2, 총예산30002",
+      "expected": "총상한30002, 1인 표시상한10001; 총예산 유형은 fits",
+      "gate": "P0",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R01",
+      "area": "ranking",
+      "scenario": "조건이 같은 요청을 동일 스냅샷·정책으로 반복",
+      "expected": "place_id 순서와 비용·근거 동일",
+      "gate": "P0",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R02",
+      "area": "ranking",
+      "scenario": "필수 quiet 요청, known 태그에 quiet 없음",
+      "expected": "후보 제외. 태그 자체 미확인은 별도 정보부족",
+      "gate": "P0",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R03",
+      "area": "ranking",
+      "scenario": "지역·업종·인원·예산 조건 위반 후보 포함",
+      "expected": "위반 후보가 기본 추천에 0개",
+      "gate": "P0",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R04",
+      "area": "ranking",
+      "scenario": "같은 점수 후보 여러 개",
+      "expected": "cost_max 오름차순, 같으면 place_id 오름차순",
+      "gate": "P0",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R05",
+      "area": "ranking",
+      "scenario": "모든 후보 좌표 없음 또는 분위기 선호 없음",
+      "expected": "거리 또는 분위기 가중치 전체 제외, 활성 가중치 합계1",
+      "gate": "P0",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R06",
+      "area": "ranking",
+      "scenario": "한 후보만 활성 상권 지표 누락",
+      "expected": "그 후보는 근거부족 그룹. 후보별 유리한 가중치 재정규화 금지",
+      "gate": "P0",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R07",
+      "area": "ranking",
+      "scenario": "비교 구역4개 또는 값이 모두 같음",
+      "expected": "4개면 지표 미산정; 5개 이상 동일값이면 백분위0.5",
+      "gate": "P0",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R08",
+      "area": "ranking",
+      "scenario": "직전 기간 x 평균0 또는 가맹점 수 변화20% 초과",
+      "expected": "추세 미산정, 무한 증가율·0 보충 금지",
+      "gate": "P0",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R09",
+      "area": "ranking",
+      "scenario": "평균 가맹점 수 변화 정확히20%",
+      "expected": "다른 조건 유효 시 추세 산정 가능; 초과만 차단",
+      "gate": "P0",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R10",
+      "area": "ranking",
+      "scenario": "가맹점4개 또는 주간 결제19건",
+      "expected": "비공개·미산정; 원자료의 더 엄격한 제한 우선",
+      "gate": "P0",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R11",
+      "area": "ranking",
+      "scenario": "음식점 15:00 또는22:00 방문, 영업 시작17:00 방문",
+      "expected": "끝시각 제외·시작시각 포함. 15/22시는 closed, 17시는 open",
+      "gate": "P0",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R12",
+      "area": "ranking",
+      "scenario": "모든 기본 후보 탈락",
+      "expected": "200 items=[]; 이유·수정안. 예산·지역 자동 변경 없음",
+      "gate": "P0",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "E01",
+      "area": "evidence",
+      "scenario": "근거에 DB에 없는 evidence_id 또는 수치 불일치 주입",
+      "expected": "해당 설명 미노출·검증 오류 기록",
+      "gate": "P0",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "E02",
+      "area": "evidence",
+      "scenario": "상권 높은 결제 활동을 설명",
+      "expected": "점포 단골·주민 비율·지금 혼잡 주장 없음",
+      "gate": "P0",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "E03",
+      "area": "evidence",
+      "scenario": "P0 카드와 상세 열기",
+      "expected": "가상 표시·가격 확인일·집계 기간·출처·단위 노출",
+      "gate": "P0",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "E04",
+      "area": "evidence",
+      "scenario": "자료별 확인일 다름",
+      "expected": "전체를 하나의 최신 기준일로 뭉개지 않고 자료별 기준일 표시",
+      "gate": "P0",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "A01",
+      "area": "api",
+      "scenario": "없는 place_id 조회",
+      "expected": "404, 복귀 안내",
+      "gate": "P0",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "A02",
+      "area": "api",
+      "scenario": "사용할 수 없는 snapshot_id 또는 모드 불일치",
+      "expected": "409, 명시적 갱신 안내",
+      "gate": "P0",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "A03",
+      "area": "api",
+      "scenario": "16KB 초과 요청, 501자 원문 요청",
+      "expected": "각각413, 422",
+      "gate": "P0",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "A04",
+      "area": "api",
+      "scenario": "기본 데이터 로딩 불가",
+      "expected": "503. 성공 응답 또는 다른 모드로 자동 전환 금지",
+      "gate": "P0",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "U01",
+      "area": "ui",
+      "scenario": "S01→S02→S03→S04→S05 정상 흐름",
+      "expected": "조건 확인·예산 상한·근거·대안 비교까지 완료",
+      "gate": "P0",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "U02",
+      "area": "ui",
+      "scenario": "파서 실패 또는 모호한 예산·인원",
+      "expected": "원문 보존·수동 폼·추정 필드 표시",
+      "gate": "P0",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "U03",
+      "area": "ui",
+      "scenario": "검색 A 후 B, A 응답이 더 늦게 도착",
+      "expected": "B 결과 유지, A가 화면을 덮지 않음",
+      "gate": "P0",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "U04",
+      "area": "ui",
+      "scenario": "저장·새로고침·전체삭제",
+      "expected": "저장은 place_id/snapshot_id/saved_at만 유지; 삭제 후 복원되지 않음",
+      "gate": "P0",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "U05",
+      "area": "ui",
+      "scenario": "360/390/768/1280px, 키보드만 사용",
+      "expected": "가로 넘침 없음, label·focus·오류 안내·텍스트 상태 정상",
+      "gate": "P0",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "U06",
+      "area": "ui",
+      "scenario": "가격 결측·예산 초과·빈 후보 화면",
+      "expected": "각 상태를 구분하고 허위 추천·합계·할인 없음",
+      "gate": "P0",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "S01",
+      "area": "security",
+      "scenario": "LLM·지도 키 없이 P0 기동",
+      "expected": "필수 기능 기동 가능, 외부 런타임 호출0, 미연결 표기",
+      "gate": "P0",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "S02",
+      "area": "security",
+      "scenario": "검색문에 이전지시무시·키출력·쉘실행 요구",
+      "expected": "도구·DB 변경 없음, 조건 데이터로만 처리",
+      "gate": "P0",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "S03",
+      "area": "security",
+      "scenario": "빌드 번들·로그·보고서·git diff 검사",
+      "expected": "서버 키·개인 원문·정밀 위치 유출 없음",
+      "gate": "P0",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "S04",
+      "area": "security",
+      "scenario": "운영 DB 경로로 seed 실행 시도",
+      "expected": "쓰기 전 거부. 데이터 초기화 없음",
+      "gate": "P0",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "P01",
+      "area": "parser",
+      "scenario": "고정 30문장 평가",
+      "expected": "검사 필드 정답률90% 이상 및 무근거 인원·예산 단위 확정0건",
+      "gate": "P0",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "X01",
+      "area": "integration",
+      "scenario": "승인된 실제 LLM로 호출·timeout·401 재현",
+      "expected": "실호출 근거, 스키마 검증, 실패 대체. 401 재시도0",
+      "gate": "P1",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "X02",
+      "area": "integration",
+      "scenario": "승인된 실지도 로딩·실패 재현",
+      "expected": "유효 실제 좌표와 목록 동기화. 5초 실패 시 목록 유지",
+      "gate": "P1",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "X03",
+      "area": "integration",
+      "scenario": "승인된 실제 데이터 적재",
+      "expected": "사용권·매핑·품질·실제 출처 검증, 가상 혼합0",
+      "gate": "P1",
+      "status": "NOT_RUN"
+    }
+  ]
+}

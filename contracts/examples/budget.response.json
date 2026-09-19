@@ -1,0 +1,28 @@
+{
+  "request_id": "req-demo-budget-001",
+  "snapshot_id": "demo-v2-20260919",
+  "policy_version": "cc-policy-2.0.0",
+  "data_mode": "demo",
+  "reference_now": "2026-09-19T18:00:00+09:00",
+  "comparison_mode": "alternatives",
+  "total_budget": 40000,
+  "items": [
+    {
+      "place_id": "DEMO-D01-01",
+      "bundle_id": "BUNDLE-DEMO-D01-01",
+      "party_size": 2,
+      "cost_min": 30000,
+      "cost_max": 36000,
+      "per_person_min": 15000,
+      "per_person_max": 18000,
+      "remaining_min": 4000,
+      "remaining_max": 10000,
+      "budget_status": "fits",
+      "source_id": "SRC-DEMO-PLACES",
+      "assumptions": ["1인 기본 식사 구성 × 2명", "추가 주문·주류 제외", "확인되지 않은 할인 미적용"],
+      "is_mock": true,
+      "observed_at": "2026-09-18T12:00:00+09:00"
+    }
+  ],
+  "warnings": ["가상 데이터 기반 예산 예시"]
+}

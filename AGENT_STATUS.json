@@ -1,0 +1,69 @@
+{
+  "spec_version": "3.2",
+  "session_status": "PROTOTYPE_INPUT_REQUIRED",
+  "target_release": "PROTOTYPE_V3_2",
+  "current_task": "V32-VERIFIED-DATA-THEN-GEMINI",
+  "scope": {
+    "submission_admin": "USER_OWNED_OUT_OF_SCOPE",
+    "region": "동성로·중앙로역 일대 시범 상권",
+    "region_id": "dongseongro",
+    "category": "restaurant",
+    "source_category_label": "한식 음식점",
+    "candidate_place_ids": ["CAND-HANSIK-001", "CAND-HANSIK-002", "CAND-HANSIK-003"],
+    "candidate_count_is_contest_requirement": false
+  },
+  "tasks": [
+    {
+      "id": "V32-01",
+      "status": "DONE",
+      "summary": "3개 장소·7개 공개 가격을 검증 전 후보부로 분리하고 자동 승격 방지",
+      "evidence": ["data/real/data_candidates.json", "backend/app/readiness.py", "scripts/check_v32_readiness.py"]
+    },
+    {
+      "id": "V32-02",
+      "status": "DONE_WITH_SYNTHETIC_FIXTURE",
+      "summary": "메뉴별 가격·수량·필수비용·확인자 역할·이용근거를 저장하고 서버 예산 계산",
+      "evidence": ["backend/app/real_data.py", "backend/app/domain/budget.py", "backend/tests/test_real_data.py"]
+    },
+    {
+      "id": "V32-03",
+      "status": "DONE_WITH_SYNTHETIC_FIXTURE",
+      "summary": "총/인당 예산, 1원 경계, 인원 변경, 결과 없음, 가격/상권 근거 부족, 스냅샷/ID 오류 API 검사",
+      "evidence": ["backend/tests/test_real_data.py", "contracts/openapi.generated.json"]
+    },
+    {
+      "id": "V32-04",
+      "status": "DONE",
+      "summary": "상권 집계를 점포 순위에서 제거하고 과거 공통 참고 근거로만 표시",
+      "evidence": ["backend/app/domain/ranking.py", "backend/app/domain/evidence.py", "frontend/src/ui/Screens.tsx"]
+    },
+    {
+      "id": "V32-05",
+      "status": "PREPARED_NOT_APPROVED_NOT_CONNECTED",
+      "summary": "Gemini 승인·데이터 API·전송동의·비식별·비용예약 게이트 준비",
+      "evidence": ["config/gemini_approval_plan.json", "backend/app/config.py", "backend/app/gemini_usage.py", "backend/app/adapters/gemini.py"]
+    },
+    {
+      "id": "V32-06",
+      "status": "INPUT_REQUIRED",
+      "summary": "실제 메뉴·S04 점포 매칭·카드 집계/사전/권한 반입과 실제 서버 검증",
+      "evidence": ["USER_ACTIONS.md", "BLOCKERS.md", "data/real/README.md"]
+    }
+  ],
+  "test_results": [
+    {"id": "BACKEND_TESTS", "status": "PASS", "evidence": "32 passed"},
+    {"id": "FRONTEND_BUILD", "status": "PASS", "evidence": "npm run build"},
+    {"id": "REAL_PACKAGE_IMPORT", "status": "PASS_SYNTHETIC_FIXTURE_ONLY", "evidence": "backend/tests/test_real_data.py"},
+    {"id": "REAL_SOURCE_FILES", "status": "NOT_ACQUIRED", "evidence": "0 files / 0 rows"},
+    {"id": "GEMINI_APPROVAL", "status": "UNAPPROVED", "evidence": "config/gemini_approval_plan.json"},
+    {"id": "GEMINI_REAL_CALL", "status": "NOT_RUN", "evidence": "llm_enabled=false"}
+  ],
+  "blockers": [
+    {"id": "BLK-V32-MENU", "status": "OPEN", "summary": "점포별 현재 메뉴·가격·제공단위·최소주문·필수비용·확인일·사용근거 미확보"},
+    {"id": "BLK-V32-PLACE", "status": "OPEN", "summary": "S04 원본 CSV·공간/업종 코드·3개 점포 매칭 미완료"},
+    {"id": "BLK-V32-BEHAVIOR", "status": "OPEN", "summary": "신한카드 실파일·데이터 사전·분석/반출/시연/공개 권한 미확보"},
+    {"id": "BLK-V32-GEMINI", "status": "WAITING_FOR_DATA_API", "summary": "데이터 API 실자료 통과 전이며 Gemini 사용안 미승인"}
+  ],
+  "next_resume_step": "필수 증빙을 data/real의 비공개 작업 경로에 놓고 data_candidates.json의 검증 필드를 채운 뒤 check_v32_readiness.py, build_real_manifest.py, import_real_data.py --check, 실제 HTTP/브라우저 검증 순서로 진행한다. 모두 통과한 뒤에만 Gemini 승인안을 다시 제시한다.",
+  "updated_at": "2026-09-19T23:00:00+09:00"
+}

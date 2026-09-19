@@ -1,0 +1,922 @@
+[
+  {
+    "bundle_id": "BUNDLE-DEMO-D01-01",
+    "place_id": "DEMO-D01-01",
+    "unit": "per_person",
+    "label": "1인 기본 식사 구성",
+    "unit_min": 15000,
+    "unit_max": 18000,
+    "fixed_fee_min": 0,
+    "fixed_fee_max": 0,
+    "currency": "KRW",
+    "observed_at": "2026-09-18T12:00:00+09:00",
+    "included": [
+      "선택한 기본 구성",
+      "확인된 필수 비용"
+    ],
+    "excluded": [
+      "추가 주문",
+      "별도 주류",
+      "미확인 할인"
+    ],
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "bundle_id": "BUNDLE-DEMO-D01-02",
+    "place_id": "DEMO-D01-02",
+    "unit": "per_person",
+    "label": "1인 기본 식사 구성",
+    "unit_min": 13500,
+    "unit_max": 16500,
+    "fixed_fee_min": 0,
+    "fixed_fee_max": 0,
+    "currency": "KRW",
+    "observed_at": "2026-09-18T12:00:00+09:00",
+    "included": [
+      "선택한 기본 구성",
+      "확인된 필수 비용"
+    ],
+    "excluded": [
+      "추가 주문",
+      "별도 주류",
+      "미확인 할인"
+    ],
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "bundle_id": "BUNDLE-DEMO-D01-03",
+    "place_id": "DEMO-D01-03",
+    "unit": "per_person",
+    "label": "1인 기본 식사 구성",
+    "unit_min": 15000,
+    "unit_max": 18000,
+    "fixed_fee_min": 0,
+    "fixed_fee_max": 0,
+    "currency": "KRW",
+    "observed_at": "2026-09-18T12:00:00+09:00",
+    "included": [
+      "선택한 기본 구성",
+      "확인된 필수 비용"
+    ],
+    "excluded": [
+      "추가 주문",
+      "별도 주류",
+      "미확인 할인"
+    ],
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "bundle_id": "BUNDLE-DEMO-D01-04",
+    "place_id": "DEMO-D01-04",
+    "unit": "per_person",
+    "label": "1인 음료 1잔 구성",
+    "unit_min": 5500,
+    "unit_max": 7500,
+    "fixed_fee_min": 0,
+    "fixed_fee_max": 0,
+    "currency": "KRW",
+    "observed_at": "2026-09-18T12:00:00+09:00",
+    "included": [
+      "선택한 기본 구성",
+      "확인된 필수 비용"
+    ],
+    "excluded": [
+      "추가 주문",
+      "별도 주류",
+      "미확인 할인"
+    ],
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "bundle_id": "BUNDLE-DEMO-D01-05",
+    "place_id": "DEMO-D01-05",
+    "unit": "per_person",
+    "label": "1인 음료 1잔 구성",
+    "unit_min": 6500,
+    "unit_max": 8500,
+    "fixed_fee_min": 0,
+    "fixed_fee_max": 0,
+    "currency": "KRW",
+    "observed_at": "2026-09-18T12:00:00+09:00",
+    "included": [
+      "선택한 기본 구성",
+      "확인된 필수 비용"
+    ],
+    "excluded": [
+      "추가 주문",
+      "별도 주류",
+      "미확인 할인"
+    ],
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "bundle_id": "BUNDLE-DEMO-D02-01",
+    "place_id": "DEMO-D02-01",
+    "unit": "per_person",
+    "label": "1인 기본 식사 구성",
+    "unit_min": 13000,
+    "unit_max": 16000,
+    "fixed_fee_min": 0,
+    "fixed_fee_max": 0,
+    "currency": "KRW",
+    "observed_at": "2026-09-18T12:00:00+09:00",
+    "included": [
+      "선택한 기본 구성",
+      "확인된 필수 비용"
+    ],
+    "excluded": [
+      "추가 주문",
+      "별도 주류",
+      "미확인 할인"
+    ],
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "bundle_id": "BUNDLE-DEMO-D02-02",
+    "place_id": "DEMO-D02-02",
+    "unit": "per_person",
+    "label": "1인 기본 식사 구성",
+    "unit_min": 14500,
+    "unit_max": 17500,
+    "fixed_fee_min": 0,
+    "fixed_fee_max": 0,
+    "currency": "KRW",
+    "observed_at": "2026-09-18T12:00:00+09:00",
+    "included": [
+      "선택한 기본 구성",
+      "확인된 필수 비용"
+    ],
+    "excluded": [
+      "추가 주문",
+      "별도 주류",
+      "미확인 할인"
+    ],
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "bundle_id": "BUNDLE-DEMO-D02-03",
+    "place_id": "DEMO-D02-03",
+    "unit": "per_person",
+    "label": "1인 기본 식사 구성",
+    "unit_min": 16000,
+    "unit_max": 19000,
+    "fixed_fee_min": 0,
+    "fixed_fee_max": 0,
+    "currency": "KRW",
+    "observed_at": "2026-09-18T12:00:00+09:00",
+    "included": [
+      "선택한 기본 구성",
+      "확인된 필수 비용"
+    ],
+    "excluded": [
+      "추가 주문",
+      "별도 주류",
+      "미확인 할인"
+    ],
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "bundle_id": "BUNDLE-DEMO-D02-04",
+    "place_id": "DEMO-D02-04",
+    "unit": "per_person",
+    "label": "1인 음료 1잔 구성",
+    "unit_min": 6000,
+    "unit_max": 8000,
+    "fixed_fee_min": 0,
+    "fixed_fee_max": 0,
+    "currency": "KRW",
+    "observed_at": "2026-09-18T12:00:00+09:00",
+    "included": [
+      "선택한 기본 구성",
+      "확인된 필수 비용"
+    ],
+    "excluded": [
+      "추가 주문",
+      "별도 주류",
+      "미확인 할인"
+    ],
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "bundle_id": "BUNDLE-DEMO-D02-05",
+    "place_id": "DEMO-D02-05",
+    "unit": "per_person",
+    "label": "1인 음료 1잔 구성",
+    "unit_min": 7000,
+    "unit_max": 9000,
+    "fixed_fee_min": 0,
+    "fixed_fee_max": 0,
+    "currency": "KRW",
+    "observed_at": "2026-09-18T12:00:00+09:00",
+    "included": [
+      "선택한 기본 구성",
+      "확인된 필수 비용"
+    ],
+    "excluded": [
+      "추가 주문",
+      "별도 주류",
+      "미확인 할인"
+    ],
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "bundle_id": "BUNDLE-DEMO-D03-01",
+    "place_id": "DEMO-D03-01",
+    "unit": "per_person",
+    "label": "1인 기본 식사 구성",
+    "unit_min": 14000,
+    "unit_max": 17000,
+    "fixed_fee_min": 0,
+    "fixed_fee_max": 0,
+    "currency": "KRW",
+    "observed_at": "2026-09-18T12:00:00+09:00",
+    "included": [
+      "선택한 기본 구성",
+      "확인된 필수 비용"
+    ],
+    "excluded": [
+      "추가 주문",
+      "별도 주류",
+      "미확인 할인"
+    ],
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "bundle_id": "BUNDLE-DEMO-D03-02",
+    "place_id": "DEMO-D03-02",
+    "unit": "per_person",
+    "label": "1인 기본 식사 구성",
+    "unit_min": 15500,
+    "unit_max": 18500,
+    "fixed_fee_min": 0,
+    "fixed_fee_max": 0,
+    "currency": "KRW",
+    "observed_at": "2026-09-18T12:00:00+09:00",
+    "included": [
+      "선택한 기본 구성",
+      "확인된 필수 비용"
+    ],
+    "excluded": [
+      "추가 주문",
+      "별도 주류",
+      "미확인 할인"
+    ],
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "bundle_id": "BUNDLE-DEMO-D03-03",
+    "place_id": "DEMO-D03-03",
+    "unit": "per_person",
+    "label": "1인 기본 식사 구성",
+    "unit_min": 17000,
+    "unit_max": 20000,
+    "fixed_fee_min": 0,
+    "fixed_fee_max": 0,
+    "currency": "KRW",
+    "observed_at": "2026-09-18T12:00:00+09:00",
+    "included": [
+      "선택한 기본 구성",
+      "확인된 필수 비용"
+    ],
+    "excluded": [
+      "추가 주문",
+      "별도 주류",
+      "미확인 할인"
+    ],
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "bundle_id": "BUNDLE-DEMO-D03-04",
+    "place_id": "DEMO-D03-04",
+    "unit": "per_person",
+    "label": "1인 음료 1잔 구성",
+    "unit_min": 6500,
+    "unit_max": 8500,
+    "fixed_fee_min": 0,
+    "fixed_fee_max": 0,
+    "currency": "KRW",
+    "observed_at": "2026-09-18T12:00:00+09:00",
+    "included": [
+      "선택한 기본 구성",
+      "확인된 필수 비용"
+    ],
+    "excluded": [
+      "추가 주문",
+      "별도 주류",
+      "미확인 할인"
+    ],
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "bundle_id": "BUNDLE-DEMO-D03-05",
+    "place_id": "DEMO-D03-05",
+    "unit": "per_person",
+    "label": "1인 음료 1잔 구성",
+    "unit_min": 7500,
+    "unit_max": 9500,
+    "fixed_fee_min": 0,
+    "fixed_fee_max": 0,
+    "currency": "KRW",
+    "observed_at": "2026-09-18T12:00:00+09:00",
+    "included": [
+      "선택한 기본 구성",
+      "확인된 필수 비용"
+    ],
+    "excluded": [
+      "추가 주문",
+      "별도 주류",
+      "미확인 할인"
+    ],
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "bundle_id": "BUNDLE-DEMO-D04-01",
+    "place_id": "DEMO-D04-01",
+    "unit": "per_person",
+    "label": "1인 기본 식사 구성",
+    "unit_min": 15000,
+    "unit_max": 18000,
+    "fixed_fee_min": 0,
+    "fixed_fee_max": 0,
+    "currency": "KRW",
+    "observed_at": "2026-09-18T12:00:00+09:00",
+    "included": [
+      "선택한 기본 구성",
+      "확인된 필수 비용"
+    ],
+    "excluded": [
+      "추가 주문",
+      "별도 주류",
+      "미확인 할인"
+    ],
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "bundle_id": "BUNDLE-DEMO-D04-02",
+    "place_id": "DEMO-D04-02",
+    "unit": "per_person",
+    "label": "1인 기본 식사 구성",
+    "unit_min": 16500,
+    "unit_max": 19500,
+    "fixed_fee_min": 0,
+    "fixed_fee_max": 0,
+    "currency": "KRW",
+    "observed_at": "2026-09-18T12:00:00+09:00",
+    "included": [
+      "선택한 기본 구성",
+      "확인된 필수 비용"
+    ],
+    "excluded": [
+      "추가 주문",
+      "별도 주류",
+      "미확인 할인"
+    ],
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "bundle_id": "BUNDLE-DEMO-D04-03",
+    "place_id": "DEMO-D04-03",
+    "unit": "per_person",
+    "label": "1인 기본 식사 구성",
+    "unit_min": 18000,
+    "unit_max": 21000,
+    "fixed_fee_min": 0,
+    "fixed_fee_max": 0,
+    "currency": "KRW",
+    "observed_at": "2026-09-18T12:00:00+09:00",
+    "included": [
+      "선택한 기본 구성",
+      "확인된 필수 비용"
+    ],
+    "excluded": [
+      "추가 주문",
+      "별도 주류",
+      "미확인 할인"
+    ],
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "bundle_id": "BUNDLE-DEMO-D04-04",
+    "place_id": "DEMO-D04-04",
+    "unit": "per_person",
+    "label": "1인 음료 1잔 구성",
+    "unit_min": 7000,
+    "unit_max": 9000,
+    "fixed_fee_min": 0,
+    "fixed_fee_max": 0,
+    "currency": "KRW",
+    "observed_at": "2026-09-18T12:00:00+09:00",
+    "included": [
+      "선택한 기본 구성",
+      "확인된 필수 비용"
+    ],
+    "excluded": [
+      "추가 주문",
+      "별도 주류",
+      "미확인 할인"
+    ],
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "bundle_id": "BUNDLE-DEMO-D04-05",
+    "place_id": "DEMO-D04-05",
+    "unit": "per_person",
+    "label": "1인 음료 1잔 구성",
+    "unit_min": 8000,
+    "unit_max": 10000,
+    "fixed_fee_min": 0,
+    "fixed_fee_max": 0,
+    "currency": "KRW",
+    "observed_at": "2026-09-18T12:00:00+09:00",
+    "included": [
+      "선택한 기본 구성",
+      "확인된 필수 비용"
+    ],
+    "excluded": [
+      "추가 주문",
+      "별도 주류",
+      "미확인 할인"
+    ],
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "bundle_id": "BUNDLE-DEMO-S01-01",
+    "place_id": "DEMO-S01-01",
+    "unit": "per_person",
+    "label": "1인 기본 식사 구성",
+    "unit_min": 13000,
+    "unit_max": 16000,
+    "fixed_fee_min": 0,
+    "fixed_fee_max": 0,
+    "currency": "KRW",
+    "observed_at": "2026-09-18T12:00:00+09:00",
+    "included": [
+      "선택한 기본 구성",
+      "확인된 필수 비용"
+    ],
+    "excluded": [
+      "추가 주문",
+      "별도 주류",
+      "미확인 할인"
+    ],
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "bundle_id": "BUNDLE-DEMO-S01-02",
+    "place_id": "DEMO-S01-02",
+    "unit": "per_person",
+    "label": "1인 기본 식사 구성",
+    "unit_min": 14500,
+    "unit_max": 17500,
+    "fixed_fee_min": 0,
+    "fixed_fee_max": 0,
+    "currency": "KRW",
+    "observed_at": "2026-09-18T12:00:00+09:00",
+    "included": [
+      "선택한 기본 구성",
+      "확인된 필수 비용"
+    ],
+    "excluded": [
+      "추가 주문",
+      "별도 주류",
+      "미확인 할인"
+    ],
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "bundle_id": "BUNDLE-DEMO-S01-03",
+    "place_id": "DEMO-S01-03",
+    "unit": "per_person",
+    "label": "1인 기본 식사 구성",
+    "unit_min": 16000,
+    "unit_max": 19000,
+    "fixed_fee_min": 0,
+    "fixed_fee_max": 0,
+    "currency": "KRW",
+    "observed_at": "2026-09-18T12:00:00+09:00",
+    "included": [
+      "선택한 기본 구성",
+      "확인된 필수 비용"
+    ],
+    "excluded": [
+      "추가 주문",
+      "별도 주류",
+      "미확인 할인"
+    ],
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "bundle_id": "BUNDLE-DEMO-S01-04",
+    "place_id": "DEMO-S01-04",
+    "unit": "per_person",
+    "label": "1인 음료 1잔 구성",
+    "unit_min": 6000,
+    "unit_max": 8000,
+    "fixed_fee_min": 0,
+    "fixed_fee_max": 0,
+    "currency": "KRW",
+    "observed_at": "2026-09-18T12:00:00+09:00",
+    "included": [
+      "선택한 기본 구성",
+      "확인된 필수 비용"
+    ],
+    "excluded": [
+      "추가 주문",
+      "별도 주류",
+      "미확인 할인"
+    ],
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "bundle_id": "BUNDLE-DEMO-S01-05",
+    "place_id": "DEMO-S01-05",
+    "unit": "per_person",
+    "label": "1인 음료 1잔 구성",
+    "unit_min": 7000,
+    "unit_max": 9000,
+    "fixed_fee_min": 0,
+    "fixed_fee_max": 0,
+    "currency": "KRW",
+    "observed_at": "2026-09-18T12:00:00+09:00",
+    "included": [
+      "선택한 기본 구성",
+      "확인된 필수 비용"
+    ],
+    "excluded": [
+      "추가 주문",
+      "별도 주류",
+      "미확인 할인"
+    ],
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "bundle_id": "BUNDLE-DEMO-S02-01",
+    "place_id": "DEMO-S02-01",
+    "unit": "per_person",
+    "label": "1인 기본 식사 구성",
+    "unit_min": 14000,
+    "unit_max": 17000,
+    "fixed_fee_min": 0,
+    "fixed_fee_max": 0,
+    "currency": "KRW",
+    "observed_at": "2026-09-18T12:00:00+09:00",
+    "included": [
+      "선택한 기본 구성",
+      "확인된 필수 비용"
+    ],
+    "excluded": [
+      "추가 주문",
+      "별도 주류",
+      "미확인 할인"
+    ],
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "bundle_id": "BUNDLE-DEMO-S02-02",
+    "place_id": "DEMO-S02-02",
+    "unit": "per_person",
+    "label": "1인 기본 식사 구성",
+    "unit_min": 15500,
+    "unit_max": 18500,
+    "fixed_fee_min": 0,
+    "fixed_fee_max": 0,
+    "currency": "KRW",
+    "observed_at": "2026-09-18T12:00:00+09:00",
+    "included": [
+      "선택한 기본 구성",
+      "확인된 필수 비용"
+    ],
+    "excluded": [
+      "추가 주문",
+      "별도 주류",
+      "미확인 할인"
+    ],
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "bundle_id": "BUNDLE-DEMO-S02-03",
+    "place_id": "DEMO-S02-03",
+    "unit": "per_person",
+    "label": "1인 기본 식사 구성",
+    "unit_min": 17000,
+    "unit_max": 20000,
+    "fixed_fee_min": 0,
+    "fixed_fee_max": 0,
+    "currency": "KRW",
+    "observed_at": "2026-09-18T12:00:00+09:00",
+    "included": [
+      "선택한 기본 구성",
+      "확인된 필수 비용"
+    ],
+    "excluded": [
+      "추가 주문",
+      "별도 주류",
+      "미확인 할인"
+    ],
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "bundle_id": "BUNDLE-DEMO-S02-04",
+    "place_id": "DEMO-S02-04",
+    "unit": "per_person",
+    "label": "1인 음료 1잔 구성",
+    "unit_min": 6500,
+    "unit_max": 8500,
+    "fixed_fee_min": 0,
+    "fixed_fee_max": 0,
+    "currency": "KRW",
+    "observed_at": "2026-09-18T12:00:00+09:00",
+    "included": [
+      "선택한 기본 구성",
+      "확인된 필수 비용"
+    ],
+    "excluded": [
+      "추가 주문",
+      "별도 주류",
+      "미확인 할인"
+    ],
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "bundle_id": "BUNDLE-DEMO-S02-05",
+    "place_id": "DEMO-S02-05",
+    "unit": "per_person",
+    "label": "1인 음료 1잔 구성",
+    "unit_min": 7500,
+    "unit_max": 9500,
+    "fixed_fee_min": 0,
+    "fixed_fee_max": 0,
+    "currency": "KRW",
+    "observed_at": "2026-09-18T12:00:00+09:00",
+    "included": [
+      "선택한 기본 구성",
+      "확인된 필수 비용"
+    ],
+    "excluded": [
+      "추가 주문",
+      "별도 주류",
+      "미확인 할인"
+    ],
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "bundle_id": "BUNDLE-DEMO-S03-01",
+    "place_id": "DEMO-S03-01",
+    "unit": "per_person",
+    "label": "1인 기본 식사 구성",
+    "unit_min": 15000,
+    "unit_max": 18000,
+    "fixed_fee_min": 0,
+    "fixed_fee_max": 0,
+    "currency": "KRW",
+    "observed_at": "2026-09-18T12:00:00+09:00",
+    "included": [
+      "선택한 기본 구성",
+      "확인된 필수 비용"
+    ],
+    "excluded": [
+      "추가 주문",
+      "별도 주류",
+      "미확인 할인"
+    ],
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "bundle_id": "BUNDLE-DEMO-S03-02",
+    "place_id": "DEMO-S03-02",
+    "unit": "per_person",
+    "label": "1인 기본 식사 구성",
+    "unit_min": 16500,
+    "unit_max": 19500,
+    "fixed_fee_min": 0,
+    "fixed_fee_max": 0,
+    "currency": "KRW",
+    "observed_at": "2026-09-18T12:00:00+09:00",
+    "included": [
+      "선택한 기본 구성",
+      "확인된 필수 비용"
+    ],
+    "excluded": [
+      "추가 주문",
+      "별도 주류",
+      "미확인 할인"
+    ],
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "bundle_id": "BUNDLE-DEMO-S03-03",
+    "place_id": "DEMO-S03-03",
+    "unit": "per_person",
+    "label": "1인 기본 식사 구성",
+    "unit_min": 18000,
+    "unit_max": 21000,
+    "fixed_fee_min": 0,
+    "fixed_fee_max": 0,
+    "currency": "KRW",
+    "observed_at": "2026-09-18T12:00:00+09:00",
+    "included": [
+      "선택한 기본 구성",
+      "확인된 필수 비용"
+    ],
+    "excluded": [
+      "추가 주문",
+      "별도 주류",
+      "미확인 할인"
+    ],
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "bundle_id": "BUNDLE-DEMO-S03-04",
+    "place_id": "DEMO-S03-04",
+    "unit": "per_person",
+    "label": "1인 음료 1잔 구성",
+    "unit_min": 7000,
+    "unit_max": 9000,
+    "fixed_fee_min": 0,
+    "fixed_fee_max": 0,
+    "currency": "KRW",
+    "observed_at": "2026-09-18T12:00:00+09:00",
+    "included": [
+      "선택한 기본 구성",
+      "확인된 필수 비용"
+    ],
+    "excluded": [
+      "추가 주문",
+      "별도 주류",
+      "미확인 할인"
+    ],
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "bundle_id": "BUNDLE-DEMO-S03-05",
+    "place_id": "DEMO-S03-05",
+    "unit": "per_person",
+    "label": "1인 음료 1잔 구성",
+    "unit_min": 8000,
+    "unit_max": 10000,
+    "fixed_fee_min": 0,
+    "fixed_fee_max": 0,
+    "currency": "KRW",
+    "observed_at": "2026-09-18T12:00:00+09:00",
+    "included": [
+      "선택한 기본 구성",
+      "확인된 필수 비용"
+    ],
+    "excluded": [
+      "추가 주문",
+      "별도 주류",
+      "미확인 할인"
+    ],
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "bundle_id": "BUNDLE-DEMO-S04-01",
+    "place_id": "DEMO-S04-01",
+    "unit": "per_person",
+    "label": "1인 기본 식사 구성",
+    "unit_min": 16000,
+    "unit_max": 19000,
+    "fixed_fee_min": 0,
+    "fixed_fee_max": 0,
+    "currency": "KRW",
+    "observed_at": "2026-09-18T12:00:00+09:00",
+    "included": [
+      "선택한 기본 구성",
+      "확인된 필수 비용"
+    ],
+    "excluded": [
+      "추가 주문",
+      "별도 주류",
+      "미확인 할인"
+    ],
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "bundle_id": "BUNDLE-DEMO-S04-02",
+    "place_id": "DEMO-S04-02",
+    "unit": "per_person",
+    "label": "1인 기본 식사 구성",
+    "unit_min": 17500,
+    "unit_max": 20500,
+    "fixed_fee_min": 0,
+    "fixed_fee_max": 0,
+    "currency": "KRW",
+    "observed_at": "2026-09-18T12:00:00+09:00",
+    "included": [
+      "선택한 기본 구성",
+      "확인된 필수 비용"
+    ],
+    "excluded": [
+      "추가 주문",
+      "별도 주류",
+      "미확인 할인"
+    ],
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "bundle_id": "BUNDLE-DEMO-S04-03",
+    "place_id": "DEMO-S04-03",
+    "unit": "per_person",
+    "label": "1인 기본 식사 구성",
+    "unit_min": 19000,
+    "unit_max": 22000,
+    "fixed_fee_min": 0,
+    "fixed_fee_max": 0,
+    "currency": "KRW",
+    "observed_at": "2026-09-18T12:00:00+09:00",
+    "included": [
+      "선택한 기본 구성",
+      "확인된 필수 비용"
+    ],
+    "excluded": [
+      "추가 주문",
+      "별도 주류",
+      "미확인 할인"
+    ],
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "bundle_id": "BUNDLE-DEMO-S04-04",
+    "place_id": "DEMO-S04-04",
+    "unit": "per_person",
+    "label": "1인 음료 1잔 구성",
+    "unit_min": 7500,
+    "unit_max": 9500,
+    "fixed_fee_min": 0,
+    "fixed_fee_max": 0,
+    "currency": "KRW",
+    "observed_at": "2026-09-18T12:00:00+09:00",
+    "included": [
+      "선택한 기본 구성",
+      "확인된 필수 비용"
+    ],
+    "excluded": [
+      "추가 주문",
+      "별도 주류",
+      "미확인 할인"
+    ],
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  },
+  {
+    "bundle_id": "BUNDLE-DEMO-S04-05",
+    "place_id": "DEMO-S04-05",
+    "unit": "per_person",
+    "label": "1인 음료 1잔 구성",
+    "unit_min": 8500,
+    "unit_max": 10500,
+    "fixed_fee_min": 0,
+    "fixed_fee_max": 0,
+    "currency": "KRW",
+    "observed_at": "2026-09-18T12:00:00+09:00",
+    "included": [
+      "선택한 기본 구성",
+      "확인된 필수 비용"
+    ],
+    "excluded": [
+      "추가 주문",
+      "별도 주류",
+      "미확인 할인"
+    ],
+    "source_id": "SRC-DEMO-PLACES",
+    "is_mock": true
+  }
+]

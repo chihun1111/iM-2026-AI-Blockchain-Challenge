@@ -1,0 +1,27 @@
+{
+  "spec_version": "3.2",
+  "scope_status": "USER_APPROVED_FOR_DEVELOPMENT",
+  "display_name": "동성로·중앙로역 일대 시범 상권",
+  "region_id": "dongseongro",
+  "category": "restaurant",
+  "source_category_label": "한식 음식점",
+  "candidate_place_ids": [
+    "CAND-HANSIK-001",
+    "CAND-HANSIK-002",
+    "CAND-HANSIK-003"
+  ],
+  "boundary": null,
+  "administrative_code": null,
+  "radius_m": null,
+  "boundary_claim_allowed": false,
+  "excluded": [
+    "cafe",
+    "delivery_only",
+    "suseongmot",
+    "all_daegu",
+    "payment",
+    "membership",
+    "admin"
+  ],
+  "note": "프로젝트 최소 범위 결정이며 공모전 지정사항 또는 공식 상권 경계가 아니다."
+}

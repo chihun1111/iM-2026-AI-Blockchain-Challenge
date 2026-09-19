@@ -1,0 +1,146 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ConfirmedConditionsV2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "region_id",
+    "category",
+    "purpose",
+    "party_size",
+    "budget",
+    "visit_at",
+    "atmosphere_preferences",
+    "required_atmosphere",
+    "priority_profile",
+    "origin",
+    "radius_m",
+    "confirmed"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "2.0"
+    },
+    "region_id": {
+      "enum": [
+        "dongseongro",
+        "suseongmot"
+      ]
+    },
+    "category": {
+      "enum": [
+        "restaurant",
+        "cafe"
+      ]
+    },
+    "purpose": {
+      "enum": [
+        "meal",
+        "cafe",
+        "date",
+        "friends"
+      ]
+    },
+    "party_size": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 6
+    },
+    "budget": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "amount",
+        "currency"
+      ],
+      "properties": {
+        "type": {
+          "enum": [
+            "per_person",
+            "total"
+          ]
+        },
+        "amount": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 10000000
+        },
+        "currency": {
+          "const": "KRW"
+        }
+      }
+    },
+    "visit_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "atmosphere_preferences": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "quiet",
+          "conversation",
+          "lively",
+          "solo_friendly"
+        ]
+      }
+    },
+    "required_atmosphere": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "quiet",
+          "conversation",
+          "lively",
+          "solo_friendly"
+        ]
+      }
+    },
+    "priority_profile": {
+      "enum": [
+        "balanced",
+        "activity_focus"
+      ]
+    },
+    "origin": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "latitude",
+            "longitude"
+          ],
+          "properties": {
+            "latitude": {
+              "type": "number",
+              "minimum": -90,
+              "maximum": 90
+            },
+            "longitude": {
+              "type": "number",
+              "minimum": -180,
+              "maximum": 180
+            }
+          }
+        }
+      ]
+    },
+    "radius_m": {
+      "type": "integer",
+      "minimum": 100,
+      "maximum": 10000
+    },
+    "confirmed": {
+      "const": true
+    }
+  },
+  "$comment": "별도 도메인 검증: required_atmosphere는 atmosphere_preferences의 부분집합. visit_at을 Asia/Seoul로 변환 후 기준시각~30일 범위 검사. demo 모드의 origin은 null. 총예산·time_bucket은 서버 파생값. request_id는 API envelope에서 관리."
+}

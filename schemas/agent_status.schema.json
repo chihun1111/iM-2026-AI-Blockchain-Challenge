@@ -1,0 +1,172 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AgentStatusV2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "spec_version",
+    "session_status",
+    "target_release",
+    "current_task",
+    "tasks",
+    "blockers",
+    "test_results",
+    "next_resume_step",
+    "updated_at"
+  ],
+  "properties": {
+    "spec_version": {
+      "const": "2.0"
+    },
+    "session_status": {
+      "enum": [
+        "NOT_STARTED",
+        "IN_PROGRESS",
+        "BLOCKED",
+        "PARTIAL_REVIEW_REQUIRED",
+        "DONE_WITH_FOLLOWUPS",
+        "DONE"
+      ]
+    },
+    "target_release": {
+      "enum": [
+        "P0_DEMO",
+        "P1_INTEGRATED"
+      ]
+    },
+    "current_task": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "tasks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "status",
+          "evidence"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "NOT_STARTED",
+              "IN_PROGRESS",
+              "DONE",
+              "BLOCKED",
+              "SKIPPED_APPROVED"
+            ]
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "blockers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "severity",
+          "status",
+          "affected_tasks",
+          "summary",
+          "requested_input",
+          "resume_condition"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "severity": {
+            "enum": [
+              "B0",
+              "B1",
+              "B2",
+              "B3"
+            ]
+          },
+          "status": {
+            "enum": [
+              "OPEN",
+              "RESOLVED",
+              "DEFERRED_APPROVED"
+            ]
+          },
+          "affected_tasks": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "summary": {
+            "type": "string"
+          },
+          "requested_input": {
+            "type": "string"
+          },
+          "resume_condition": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "test_results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "status",
+          "evidence"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "PASS",
+              "FAIL",
+              "NOT_RUN",
+              "SKIP_APPROVED"
+            ]
+          },
+          "evidence": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "next_resume_step": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "updated_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    }
+  },
+  "$comment": "DONE은 target_release의 모든 필수 TASK DONE과 필수 TEST PASS가 증거로 확인될 때만 사용. 초기 템플릿의 test_results=[]는 테스트 통과를 뜻하지 않음."
+}

@@ -1,0 +1,33 @@
+{
+  "snapshot_id": "demo-v2-20260919",
+  "data_mode": "demo",
+  "is_mock": true,
+  "reference_now": "2026-09-19T18:00:00+09:00",
+  "window_start": "2026-07-20",
+  "window_end": "2026-09-13",
+  "counts": {
+    "sources": 2,
+    "areas": 8,
+    "places": 40,
+    "price_bundles": 40,
+    "area_metrics": 768
+  },
+  "description": "합성 데이터. 장소는 가상구역당 5개이며 상권 집계의 관측 가맹점 수는 별도 가상 모집단을 표현한다. 40개 추천 후보의 실제 매출 합계가 아니다.",
+  "files": {
+    "sources.json": {
+      "sha256": "008182c0a554d2c067fadec18a96f570a48824193d705f869197692ef2b18ee4"
+    },
+    "areas.json": {
+      "sha256": "fe5ce858859cec1afda53fb941a558a131e9a878b62bf42ac80e17d8a3937de6"
+    },
+    "places.json": {
+      "sha256": "d0837f975c4969917bae68ae1ec104e7f9a6f202fc046f41423003835af8fc7d"
+    },
+    "price_bundles.json": {
+      "sha256": "bbf99829011ae905951ff113bd95095fb27c63d025416c106727f92dfb61235f"
+    },
+    "area_metrics.json": {
+      "sha256": "c811589a516c2da8a6fc51e45a34439821a274038c8470df677da3253d7c3253"
+    }
+  }
+}

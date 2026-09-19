@@ -1,0 +1,66 @@
+[
+  {
+    "area_id": "DEMO-D01",
+    "region_id": "dongseongro",
+    "name": "동성로 가상구역 1",
+    "boundary_type": "synthetic_id",
+    "centroid": null,
+    "is_mock": true
+  },
+  {
+    "area_id": "DEMO-D02",
+    "region_id": "dongseongro",
+    "name": "동성로 가상구역 2",
+    "boundary_type": "synthetic_id",
+    "centroid": null,
+    "is_mock": true
+  },
+  {
+    "area_id": "DEMO-D03",
+    "region_id": "dongseongro",
+    "name": "동성로 가상구역 3",
+    "boundary_type": "synthetic_id",
+    "centroid": null,
+    "is_mock": true
+  },
+  {
+    "area_id": "DEMO-D04",
+    "region_id": "dongseongro",
+    "name": "동성로 가상구역 4",
+    "boundary_type": "synthetic_id",
+    "centroid": null,
+    "is_mock": true
+  },
+  {
+    "area_id": "DEMO-S01",
+    "region_id": "suseongmot",
+    "name": "수성못 가상구역 1",
+    "boundary_type": "synthetic_id",
+    "centroid": null,
+    "is_mock": true
+  },
+  {
+    "area_id": "DEMO-S02",
+    "region_id": "suseongmot",
+    "name": "수성못 가상구역 2",
+    "boundary_type": "synthetic_id",
+    "centroid": null,
+    "is_mock": true
+  },
+  {
+    "area_id": "DEMO-S03",
+    "region_id": "suseongmot",
+    "name": "수성못 가상구역 3",
+    "boundary_type": "synthetic_id",
+    "centroid": null,
+    "is_mock": true
+  },
+  {
+    "area_id": "DEMO-S04",
+    "region_id": "suseongmot",
+    "name": "수성못 가상구역 4",
+    "boundary_type": "synthetic_id",
+    "centroid": null,
+    "is_mock": true
+  }
+]

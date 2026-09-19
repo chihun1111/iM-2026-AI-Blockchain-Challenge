@@ -1,0 +1,43 @@
+{
+  "request_id": "req-demo-parse-001",
+  "parser_mode": "rules",
+  "draft": {
+    "region_id": "dongseongro",
+    "category": "restaurant",
+    "purpose": "meal",
+    "party_size": 2,
+    "budget": {
+      "type": "per_person",
+      "amount": 20000,
+      "currency": "KRW"
+    },
+    "visit_at": null,
+    "priority_profile": "activity_focus"
+  },
+  "field_meta": {
+    "party_size": {
+      "origin": "inferred",
+      "reason_code": "AMBIGUOUS_COMPANION_COUNT"
+    },
+    "budget.amount": {
+      "origin": "explicit"
+    },
+    "budget.type": {
+      "origin": "explicit"
+    }
+  },
+  "missing_fields": [
+    "visit_at"
+  ],
+  "confirmation_required": [
+    "party_size",
+    "visit_at"
+  ],
+  "warnings": [
+    "규칙 기반 조건 분석 · 외부 AI 미연결"
+  ],
+  "snapshot_id": "demo-v2-20260919",
+  "policy_version": "cc-policy-2.0.0",
+  "data_mode": "demo",
+  "reference_now": "2026-09-19T18:00:00+09:00"
+}

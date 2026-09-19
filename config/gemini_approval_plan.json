@@ -1,0 +1,76 @@
+{
+  "schema_version": "3.2",
+  "status": "UNAPPROVED",
+  "llm_enabled": false,
+  "data_api_gate": {
+    "required": true,
+    "status": "NOT_PASSED",
+    "evidence": []
+  },
+  "proposal": {
+    "provider": "Google Gemini Developer API",
+    "model": "gemini-3.5-flash-lite",
+    "service_tier": "paid",
+    "role": "식별정보 없는 짧은 소비조건 문장에서 지역·인원·목적·시간·예산 단위 JSON 추출",
+    "transmission_allowed": [
+      "고정 시스템 지시문",
+      "제한된 출력 JSON 스키마",
+      "사용자가 확인한 식별정보 없는 짧은 소비조건 문장"
+    ],
+    "transmission_denied": [
+      "카드 원본 또는 집계",
+      "메뉴판 또는 점포 데이터베이스",
+      "리뷰 원문",
+      "실명·연락처·계좌",
+      "정밀 GPS",
+      "대화 전체"
+    ],
+    "application_retention": "요청 처리 동안만 메모리에 유지하고 애플리케이션·프록시·APM·오류 로그에 원문을 남기지 않음",
+    "disabled_features": [
+      "search_grounding",
+      "maps_grounding",
+      "file_search",
+      "explicit_context_caching",
+      "automatic_model_switching"
+    ]
+  },
+  "cost_plan": {
+    "currency": "USD",
+    "project_total_limit": 5.0,
+    "daily_limit": 1.0,
+    "input_usd_per_million_tokens": 0.3,
+    "output_usd_per_million_tokens_including_thinking": 2.5,
+    "max_input_tokens_per_attempt": 1000,
+    "max_output_tokens_per_attempt": 200,
+    "max_attempts": 2,
+    "illustrative_1000_request_cost_usd": 0.8,
+    "illustrative_only": true,
+    "unknown_usage_failure_policy": "KEEP_RESERVED",
+    "note": "세금·환율·결제 수수료·서버비 및 공용 프로젝트의 다른 서비스 비용은 포함하지 않는다."
+  },
+  "key_policy": {
+    "required_server_variable": "GEMINI_API_KEY",
+    "google_api_key_is_not_used_by_this_app": true,
+    "key_in_client_bundle": false,
+    "key_in_logs": false,
+    "key_in_repository": false,
+    "key_in_chat": false,
+    "dedicated_project_and_key_recommended": true
+  },
+  "approval": {
+    "approved": false,
+    "approved_by": null,
+    "approved_at": null,
+    "approved_model": null,
+    "approved_transmission_scope": null,
+    "approved_project_total_limit_usd": null,
+    "approved_daily_limit_usd": null
+  },
+  "official_sources_checked_on": "2026-09-19",
+  "official_sources": [
+    "https://ai.google.dev/gemini-api/docs/models/gemini-3.5-flash-lite",
+    "https://ai.google.dev/gemini-api/docs/pricing",
+    "https://ai.google.dev/gemini-api/terms",
+    "https://ai.google.dev/gemini-api/docs/api-key"
+  ]
+}

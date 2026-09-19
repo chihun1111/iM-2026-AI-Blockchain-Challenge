@@ -1,0 +1,81 @@
+{
+  "spec_version": "2.0",
+  "policy_version": "cc-policy-3.2.0",
+  "scope": {
+    "required_release": "P0_DEMO",
+    "regions": [
+      "dongseongro"
+    ],
+    "categories": [
+      "restaurant"
+    ],
+    "max_party_size": 6,
+    "max_results": 3,
+    "max_compare_places": 3,
+    "max_saved_places": 20
+  },
+  "execution": {
+    "data_mode": "demo",
+    "parser_mode": "rules",
+    "explanation_mode": "template",
+    "map_mode": "off",
+    "real_ingestion_enabled": false,
+    "external_calls_enabled": false,
+    "paid_calls_approved": false,
+    "public_deploy_approved": false,
+    "resume_requires_user_message": true
+  },
+  "clock": {
+    "timezone": "Asia/Seoul",
+    "demo_now": "2026-09-19T18:00:00+09:00",
+    "demo_week_start": "2026-07-20",
+    "demo_week_end": "2026-09-13",
+    "max_visit_days_ahead": 30
+  },
+  "validation": {
+    "money_currency": "KRW",
+    "money_min": 1,
+    "money_max": 10000000,
+    "query_max_characters": 500,
+    "radius_min_m": 100,
+    "radius_max_m": 10000,
+    "radius_default_m": 2000,
+    "max_request_bytes": 16384
+  },
+  "freshness_days": {
+    "price": 30,
+    "opening_hours": 14,
+    "atmosphere": 90,
+    "area_metrics": 45
+  },
+  "ranking": {
+    "profiles": {
+      "balanced": {
+        "budget": 0.6,
+        "purpose": 0.25,
+        "atmosphere": 0.15
+      }
+    },
+    "tie_break": [
+      "score_desc",
+      "cost_max_asc",
+      "place_id_asc"
+    ],
+    "score_round_decimals": 6,
+    "place_scores_visible_to_user": false
+  },
+  "timeouts": {
+    "parse_total_ms": 12000,
+    "map_load_ms": 5000,
+    "provider_per_attempt_ms": 5000,
+    "max_provider_retries": 1,
+    "provider_retry_delay_ms": 500
+  },
+  "agent": {
+    "max_distinct_local_repair_attempts": 2,
+    "max_identical_error_repeats": 1,
+    "phase_gate_required": true,
+    "checkpoint_at_task_boundary": true,
+    "blocker_report_required": true
+  }
+}
