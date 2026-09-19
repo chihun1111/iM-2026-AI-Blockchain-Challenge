@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import re
 from datetime import datetime
 from pathlib import Path
 from typing import Any
@@ -15,6 +16,8 @@ VERIFIED_MENU_FIELDS = (
     "mandatory_cost",
     "usage_basis",
 )
+SHA256_PATTERN = re.compile(r"^[0-9A-F]{64}$")
+S04_SOURCE_ID = "S04-SEMAS-COMMERCIAL-STORE-CATALOG"
 
 
 def _read_object(path: Path) -> dict[str, Any]:
@@ -53,6 +56,24 @@ def validate_candidate_register(path: Path) -> dict[str, Any]:
 
     source_set = set(source_ids)
     place_set = set(place_ids)
+    s04_sources = [row for row in sources if row.get("source_id") == S04_SOURCE_ID]
+    if len(s04_sources) != 1:
+        raise RuntimeError(f"{S04_SOURCE_ID} 출처는 정확히 하나여야 합니다.")
+    s04_source = s04_sources[0]
+    s04_acquired = s04_source.get("source_file_acquired") is True
+    s04_matching_completed = s04_source.get("place_matching_completed") is True
+    if s04_acquired:
+        for field in ("source_file_local_path", "source_entry_name"):
+            if not isinstance(s04_source.get(field), str) or not s04_source[field]:
+                raise RuntimeError(f"S04 원본을 확보했지만 {field}가 없습니다.")
+        for field in ("source_file_size_bytes", "source_entry_size_bytes", "source_entry_rows"):
+            if not isinstance(s04_source.get(field), int) or s04_source[field] <= 0:
+                raise RuntimeError(f"S04 원본을 확보했지만 {field}가 양수 정수가 아닙니다.")
+        for field in ("source_file_sha256", "source_entry_sha256"):
+            if not isinstance(s04_source.get(field), str) or not SHA256_PATTERN.fullmatch(s04_source[field]):
+                raise RuntimeError(f"S04 원본을 확보했지만 {field}가 SHA-256 형식이 아닙니다.")
+    if s04_matching_completed and not s04_acquired:
+        raise RuntimeError("S04 원본 없이 점포 매칭을 완료 처리할 수 없습니다.")
     for place in places:
         if place.get("source_id") not in source_set:
             raise RuntimeError(f"장소 출처 참조가 유효하지 않습니다: {place.get('candidate_place_id')}")
@@ -67,6 +88,12 @@ def validate_candidate_register(path: Path) -> dict[str, Any]:
             missing.append("public_place_id")
         if place.get("official_store_match_status") not in {"MATCHED", "CONFIRMED"}:
             missing.append("official_store_match")
+        elif place.get("official_store_source_id") != S04_SOURCE_ID:
+            raise RuntimeError(f"장소의 공식 점포 출처가 S04가 아닙니다: {place.get('candidate_place_id')}")
+        elif place.get("official_middle_category_code") != "I201" or place.get("official_middle_category_name") != "한식":
+            raise RuntimeError(f"장소의 S04 한식 업종 매핑이 올바르지 않습니다: {place.get('candidate_place_id')}")
+        elif any(place.get(field) in (None, "") for field in ("branch_address", "longitude", "latitude")):
+            raise RuntimeError(f"장소의 S04 주소·위경도가 불완전합니다: {place.get('candidate_place_id')}")
         if missing:
             place_blockers[str(place["candidate_place_id"])] = missing
     verified_menu_ids: list[str] = []
@@ -121,6 +148,8 @@ def validate_candidate_register(path: Path) -> dict[str, Any]:
         "candidate_place_count": len(places),
         "candidate_menu_count": len(menus),
         "verified_menu_ids": verified_menu_ids,
+        "s04_source_acquired": s04_acquired,
+        "s04_place_matching_completed": s04_matching_completed and not place_blockers,
         "scope_blockers": scope_blockers,
         "place_blockers": place_blockers,
         "menu_blockers": menu_blockers,

@@ -7,7 +7,7 @@
 ## 결과
 
 - production build: PASS (`tsc -b && vite build`)
-- 백엔드 회귀: PASS (20 passed, 기존 anyio deprecation warning 1건)
+- 당시 백엔드 회귀: PASS (20 passed, 기존 anyio deprecation warning 1건). 최신 v3.2 결과는 `FINAL_REPORT.md`와 `V32_BROWSER.md`를 우선한다.
 - 초기 단계 잠금: PASS. parse 전에는 조건/추천/근거/예산 단계가 비활성화됨.
 - 조건 분석 후 단계 잠금: PASS. 조건 확인만 활성화되고 추천은 확정 전까지 비활성화됨.
 - 추천 생성: PASS. 인당 20,000원, 2명 조건으로 demo 추천 5건 표시.

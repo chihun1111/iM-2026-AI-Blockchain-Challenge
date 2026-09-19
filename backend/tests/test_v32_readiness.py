@@ -13,6 +13,10 @@ def test_current_v32_register_stays_reference_only():
     assert result["candidate_place_count"] == 3
     assert result["candidate_menu_count"] == 7
     assert result["verified_menu_ids"] == []
+    assert result["s04_source_acquired"] is True
+    assert result["s04_place_matching_completed"] is True
+    assert result["place_blockers"] == {}
+    assert result["scope_blockers"] == ["spatial_mapping_status"]
     assert result["behavior_ready"] is False
     assert result["importable"] is False
 

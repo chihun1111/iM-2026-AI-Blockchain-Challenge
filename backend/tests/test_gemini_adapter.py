@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import copy
+from concurrent.futures import ThreadPoolExecutor
 from dataclasses import replace
 import io
 import sqlite3
@@ -10,7 +11,7 @@ import pytest
 
 from backend.app.adapters.gemini import GeminiAdapter
 from backend.app.config import ROOT, load_settings
-from backend.app.gemini_usage import GeminiBudgetExceeded
+from backend.app.gemini_usage import GeminiBudgetExceeded, GeminiUsageLedger
 
 
 def _approved_settings(base, *, allow_paid_calls=True, model="gemini-test-model"):
@@ -198,6 +199,28 @@ def test_gemini_reserves_before_call_and_stops_at_cap(monkeypatch, demo_app):
     with pytest.raises(GeminiBudgetExceeded):
         GeminiAdapter(settings).parse("동성로 식사", settings.reference_now)
     assert called == []
+
+
+def test_concurrent_reservations_cannot_overspend_limit(demo_app):
+    settings = _approved_settings(demo_app.state.settings)
+    plan = copy.deepcopy(settings.gemini_approval)
+    plan["approval"]["approved_project_total_limit_usd"] = 0.0008
+    plan["approval"]["approved_daily_limit_usd"] = 0.0008
+    settings = replace(settings, gemini_approval=plan)
+    ledger = GeminiUsageLedger(settings)
+    ledger.totals()
+
+    def reserve_once():
+        try:
+            return ledger.reserve("gemini-test-model").reserved_usd
+        except GeminiBudgetExceeded:
+            return "blocked"
+
+    with ThreadPoolExecutor(max_workers=2) as executor:
+        results = list(executor.map(lambda _: reserve_once(), range(2)))
+    assert results.count("blocked") == 1
+    assert sum(value for value in results if isinstance(value, float)) == pytest.approx(0.0008)
+    assert ledger.totals()["total_usd"] == pytest.approx(0.0008)
 
 
 def test_sensitive_identifier_is_blocked_before_reservation(monkeypatch, demo_app):

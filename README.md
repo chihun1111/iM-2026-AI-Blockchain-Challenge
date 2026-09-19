@@ -4,7 +4,7 @@
 
 팀 기적의 인큐4 | 2026.09.19 | 기본 실행은 합성 demo, 목표는 검증 실데이터 프로토타입
 
-백엔드 6개 API, demo SQLite, 규칙 파서, 검증 메뉴/필수비용 계산, 3단계 React 흐름과 Gemini 실행 게이트가 구현되어 있다. 실제 메뉴·공공 점포 원본·승인 카드 집계가 없으므로 현재 화면은 합성 demo다. Gemini 승인안도 미승인이고 실제 호출은 없다.
+백엔드 6개 API, demo SQLite, 규칙 파서, 검증 메뉴/필수비용 계산, 3단계 React 흐름과 Gemini 실행 게이트가 구현되어 있다. S04 2026-06 공공 점포 원본에서 3곳의 점포·한식 업종 매칭은 완료했다. 실제 현재 메뉴와 승인 카드 집계가 없으므로 현재 화면은 합성 demo다. Gemini 승인안도 미승인이고 실제 호출은 없다.
 
 ## 사용하는 방법
 
@@ -26,7 +26,7 @@
 | `contracts/` | 프론트–백엔드 계약서·OpenAPI·대표 JSON 예시 |
 | `design/` | v2.1 디자인 명세와 제공 미리보기 연결 파일 |
 | `data/demo/` | 실제 자료가 아닌 회귀 테스트용 합성 데이터 |
-| `data/real/data_candidates.json` | 3개 장소·7개 공개 가격 참조 후보와 미확보 검증 필드 |
+| `data/real/data_candidates.json` | S04와 매칭된 3개 장소·7개 공개 가격 참조 후보와 미확보 메뉴 검증 필드 |
 | `tests/` | 인수 사례와 자연어 평가 30문장 |
 | `AGENT_STATUS.json` | v3.2 진행 상태와 실자료 재개 위치 |
 | `BLOCKERS.md` / `DECISIONS.md` | 문제·미확보 정보와 범위 결정 |
@@ -38,7 +38,7 @@
 
 P0는 외부 AI·지도·실데이터 없이 실행하도록 구현합니다. UI에는 규칙 기반 분석, 가상 데이터, 고정 시연 시각을 명확히 표시합니다. 이것을 실제 AI·실제 금융 데이터 서비스 완료로 보고하지 않습니다. X01~X03은 관련 계정·권한·자료·승인이 확보되기 전에는 미연동입니다.
 
-현재 `BLOCKERS.md`의 실제 메뉴·공공 점포 원본·카드 집계/권한·Gemini 승인 항목은 확인된 미확보 상태다. 독립 구현은 진행됐지만 실제 연동 완료로 간주하지 않는다.
+현재 `BLOCKERS.md`의 실제 메뉴·카드 집계/권한·Gemini 승인 항목은 확인된 미확보 상태다. 공공 점포 원본 매칭은 완료됐지만 공식 상권 경계는 선언하지 않았고, 전체 실제 연동 완료로 간주하지 않는다.
 
 ## 현재 구현 범위
 
@@ -118,6 +118,12 @@ ALLOW_PAID_CALLS=true
 
 이 명령은 v3.2 후보/승인 준비도, demo 원본 해시·행 수, 자연어 사례, 백엔드 계약 테스트, OpenAPI 생성, 프런트엔드 빌드를 순서대로 실행한다. 실제 Gemini 호출은 포함하지 않는다.
 
+로컬에 보관한 S04 원본 ZIP과 3개 점포 매칭은 별도로 검증한다.
+
+```powershell
+.venv\Scripts\python.exe scripts\verify_s04_matches.py
+```
+
 실행 중인 서버의 실제 HTTP/CORS·계산·오류 envelope는 별도로 확인합니다.
 
 ```powershell
@@ -126,6 +132,6 @@ ALLOW_PAID_CALLS=true
 
 ## 검증 결과의 범위
 
-합성 fixture 기준 API 계약과 프런트 빌드는 통과했다. 실제 메뉴·S04 점포 매칭·카드 집계/권한 및 Gemini 실호출은 미완료다. `reports/FINAL_REPORT.md`, `BLOCKERS.md`, `USER_ACTIONS.md`에 필요한 정확한 필드와 재개 순서를 기록했다.
+합성 fixture 기준 API 계약과 프런트 빌드는 통과했고 S04 점포 매칭도 원본으로 검증했다. 실제 메뉴·카드 집계/권한 및 Gemini 실호출은 미완료다. `reports/FINAL_REPORT.md`, `BLOCKERS.md`, `USER_ACTIONS.md`에 필요한 정확한 필드와 재개 순서를 기록했다.
 
 # iM-2026-AI-Blockchain-Challenge

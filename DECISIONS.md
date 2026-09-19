@@ -32,5 +32,6 @@
 | D-026 | IMPLEMENTED · 2026-09-19 | 같은 지역·업종의 과거 상권 집계는 점포 순위 특성에서 제거하고 공통 참고 근거로만 사용 | `backend/app/domain/ranking.py`, `backend/app/domain/evidence.py`, `frontend/src/ui/Screens.tsx` |
 | D-027 | IMPLEMENTED · 2026-09-19 | Gemini는 승인안·데이터 API gate·요청별 동의·비식별 검사·비용 사전예약이 모두 통과해야 하며 앱은 `GEMINI_API_KEY`만 사용 | `config/gemini_approval_plan.json`, `backend/app/config.py`, `backend/app/gemini_usage.py`, `backend/app/adapters/gemini.py` |
 | D-028 | NOT_APPROVED · 2026-09-19 | Google Gemini Developer API / `gemini-3.5-flash-lite` 유료 사용, 총 US$5·일 US$1 제안 | 데이터 API 실제 통과 후 승인자·일시·전송 범위·한도를 기록하기 전에는 `llm_enabled=false` 유지 |
+| D-029 | VERIFIED · 2026-09-19 | S04 2026-06 공식 ZIP/대구 CSV 해시를 고정하고 상호·지점명+도로명주소가 정확히 일치한 3건만 공공 점포로 매칭 | 세 곳의 `I201 한식` 업종과 점 위치는 확인했지만 두 행정동에 걸치므로 공식 상권 경계·대표 행정동·임의 반경은 선언하지 않음 |
 
 새 결정은 날짜, 결정자/출처, 대안, 영향 파일, 승인 범위, 정책 버전, 회귀 테스트를 함께 기록한다. 이전 결정을 삭제하여 변경 이력을 숨기지 않는다.

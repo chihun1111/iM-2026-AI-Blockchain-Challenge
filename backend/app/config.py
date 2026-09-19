@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 import os
 from dataclasses import dataclass
+from datetime import datetime
 from pathlib import Path
 from typing import Any
 
@@ -87,6 +88,11 @@ class Settings:
             reasons.append("DATA_API_GATE_NOT_PASSED")
         if approval.get("approved") is not True or not approval.get("approved_by") or not approval.get("approved_at"):
             reasons.append("APPROVAL_RECORD_INCOMPLETE")
+        else:
+            try:
+                datetime.fromisoformat(str(approval["approved_at"]))
+            except ValueError:
+                reasons.append("APPROVAL_TIME_INVALID")
         approved_model = approval.get("approved_model")
         if not approved_model or approved_model != proposal.get("model") or approved_model != self.llm_model:
             reasons.append("MODEL_NOT_APPROVED")

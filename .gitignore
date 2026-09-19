@@ -17,4 +17,5 @@ tmp/
 *.hwpx
 *.pdf
 frontend/tsconfig.tsbuildinfo
-[(]{i
+data/real/raw/
+\(\{i

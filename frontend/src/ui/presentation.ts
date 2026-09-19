@@ -9,7 +9,6 @@ export const labels: Record<string, string> = {
   date: "데이트",
   friends: "친구 모임",
   balanced: "균형형",
-  activity_focus: "활동 중심",
   quiet: "조용한",
   conversation: "대화하기 좋은",
   lively: "활기찬",

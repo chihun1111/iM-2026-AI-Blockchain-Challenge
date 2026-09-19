@@ -45,25 +45,26 @@
     },
     {
       "id": "V32-06",
-      "status": "INPUT_REQUIRED",
-      "summary": "실제 메뉴·S04 점포 매칭·카드 집계/사전/권한 반입과 실제 서버 검증",
-      "evidence": ["USER_ACTIONS.md", "BLOCKERS.md", "data/real/README.md"]
+      "status": "PARTIAL_INPUT_REQUIRED",
+      "summary": "S04 원본·점포/한식 업종 매칭 완료, 실제 메뉴·카드 집계/사전/권한 반입과 실제 서버 검증 대기",
+      "evidence": ["data/real/data_candidates.json", "scripts/verify_s04_matches.py", "reports/S04_MATCH_REPORT.md", "USER_ACTIONS.md"]
     }
   ],
   "test_results": [
-    {"id": "BACKEND_TESTS", "status": "PASS", "evidence": "32 passed"},
+    {"id": "BACKEND_TESTS", "status": "PASS", "evidence": "33 passed"},
     {"id": "FRONTEND_BUILD", "status": "PASS", "evidence": "npm run build"},
     {"id": "REAL_PACKAGE_IMPORT", "status": "PASS_SYNTHETIC_FIXTURE_ONLY", "evidence": "backend/tests/test_real_data.py"},
-    {"id": "REAL_SOURCE_FILES", "status": "NOT_ACQUIRED", "evidence": "0 files / 0 rows"},
+    {"id": "S04_PLACE_SOURCE", "status": "PASS_LOCAL_SOURCE", "evidence": "공식 ZIP SHA-256 고정, 대구 CSV 118357행, 3개 점포 정확 매칭"},
+    {"id": "BEHAVIOR_SOURCE_FILES", "status": "NOT_ACQUIRED", "evidence": "0 files / 0 rows"},
     {"id": "GEMINI_APPROVAL", "status": "UNAPPROVED", "evidence": "config/gemini_approval_plan.json"},
     {"id": "GEMINI_REAL_CALL", "status": "NOT_RUN", "evidence": "llm_enabled=false"}
   ],
   "blockers": [
     {"id": "BLK-V32-MENU", "status": "OPEN", "summary": "점포별 현재 메뉴·가격·제공단위·최소주문·필수비용·확인일·사용근거 미확보"},
-    {"id": "BLK-V32-PLACE", "status": "OPEN", "summary": "S04 원본 CSV·공간/업종 코드·3개 점포 매칭 미완료"},
+    {"id": "BLK-V32-PLACE", "status": "RESOLVED_FOR_PLACE_MATCHING", "summary": "S04 원본·점포 ID·주소·위경도·I201 한식 매칭 완료; 공식 상권 경계는 선언하지 않음"},
     {"id": "BLK-V32-BEHAVIOR", "status": "OPEN", "summary": "신한카드 실파일·데이터 사전·분석/반출/시연/공개 권한 미확보"},
     {"id": "BLK-V32-GEMINI", "status": "WAITING_FOR_DATA_API", "summary": "데이터 API 실자료 통과 전이며 Gemini 사용안 미승인"}
   ],
-  "next_resume_step": "필수 증빙을 data/real의 비공개 작업 경로에 놓고 data_candidates.json의 검증 필드를 채운 뒤 check_v32_readiness.py, build_real_manifest.py, import_real_data.py --check, 실제 HTTP/브라우저 검증 순서로 진행한다. 모두 통과한 뒤에만 Gemini 승인안을 다시 제시한다.",
-  "updated_at": "2026-09-19T23:00:00+09:00"
+  "next_resume_step": "점포별 현재 메뉴·주문조건 증빙과 승인된 카드 집계/사전/사용권을 비공개 작업 경로에 놓고 data_candidates.json의 남은 필드를 채운다. 카드 공간 단위로 세 점포와의 결합 근거를 확정한 뒤 check_v32_readiness.py, build_real_manifest.py, import_real_data.py --check, 실제 HTTP/브라우저 검증 순서로 진행한다. 모두 통과한 뒤에만 Gemini 승인안을 다시 제시한다.",
+  "updated_at": "2026-09-19T23:23:06+09:00"
 }
